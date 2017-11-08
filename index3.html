@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript" src="Scripts/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/Utils/CompentUtil.js"></script>
+    <script type="text/javascript" src="Scripts/lm-feed-back/lmfeedback.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-select/jquery.easydropdown.js"></script>
+
+    <script type="text/javascript" src="Scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/datetimepicker/js/datepicker.min.js"></script>
+    <script type="text/javascript" src="Scripts/datetimepicker/js/i18n/datepicker.zh.js"></script>
+    <script type="text/javascript" src="Scripts/pager/js/pager.js"></script>
+    <script type="text/javascript" src="http://192.168.1.45/Scripts/jquery_confirm/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="Scripts/Uploader/js/jquery.uploader.js"></script>
+
+    <script type="text/javascript" src="libs/MVVM/namespace.js"></script>
+    <script type="text/javascript" src="libs/MVVM/lib/underscore.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Collection.js"></script>
+    <script type="text/javascript" src="libs/MVVM/core.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Directive.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Observer.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="Content/font-awesome/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/font-lm/style.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/Default.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/themes/base/Comments.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/lm-feed-back/lmfeedback.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/jquery-select/easydropdown.css"/>
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.45/Scripts/jquery_confirm/jquery-confirm.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/Uploader/css/jquery.uploader.css"/>
+
+    <link type="text/css" rel="stylesheet" href="Scripts/bootstrap/css/bootstrap-theme.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/datetimepicker/css/datepicker.min.css"/>
+
+    <link type="text/css" rel="stylesheet" href="Scripts/pager/css/pager.css"/>
+
+
+<script>
+        var aaa= Str2List('你好,bbb,ccc,,aaa');
+        var ccc = aaa.select(function (data) {
+           return data+'1';
+        });
+        var bb=[{name:"111"},{name:"2222"}];
+        var dd=bb.select(function (b) {
+            return {label:b.name,is1:b.name=="111"};
+        });
+
+//        alert(JSON.stringify(aaa));
+//        alert(JSON.stringify(ccc));
+//        alert(JSON.stringify(dd));
+</script>
+    <style>
+        .demo--label{margin:20px 20px 0 0;display:inline-block}
+        .demo--radio{display:none}
+        .demo--radioInput{background-color:#fff;border:1px solid rgba(0,0,0,0.15);border-radius:100%;display:inline-block;height:16px;margin-right:10px;margin-top:-1px;vertical-align:middle;width:16px;line-height:1}
+        .demo--radio:checked + .demo--radioInput:after{background-color:#57ad68;border-radius:100%;content:"";display:inline-block;height:12px;margin:2px;width:12px}
+        .demo--checkbox.demo--radioInput,.demo--radio:checked + .demo--checkbox.demo--radioInput:after{border-radius:0}
+    </style>
+</head>
+
+<body >
+
+<div lm-controller="IndexModel">
+    <table>
+        <tr lm-forjsons="Items3">
+            <td constnode="true">#@#</td><td lm-foritems="Names"> <span>{{value}}</span></td><td constnode="true">#@#</td>
+        </tr>
+    </table>
+</div>
+</body>
+<script src="indexModel.js" type="text/javascript"></script>
+</html>

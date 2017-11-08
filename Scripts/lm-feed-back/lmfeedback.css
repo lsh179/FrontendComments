@@ -1,0 +1,117 @@
+
+/** 提示消息框 */
+.lm-message-box{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    background-color: white;
+    z-index: 99999;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 3px 10px #333333;
+    -webkit-box-shadow: 1px 3px 10px #333333;
+    -moz-box-shadow: 1px 3px 10px #333333;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+}
+
+.lm-message-box i{
+    font-size: 18px;
+    margin-right: 3px;
+    margin-top: 8px;
+}
+
+
+/** 确认模态框 */
+.ui-modal-box-full{
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(10, 10, 10, 0.35);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=35);
+}
+
+.ui-modal-box{
+    position: fixed;
+    min-width: 300px;
+    top: 50%;
+    left: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 16px;
+}
+
+.ui-modal-title{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+}
+
+.ui-modal-message{
+    font-size: 14px;
+    display: block;
+    padding: 8px 0;
+}
+
+.ui-modal-footer{
+    float: right;
+}
+
+.lm-bnt-done{
+    margin-right: 5px;
+}
+
+/** 消息通知框 */
+.ui-notification-box{
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    background-color: white;
+    z-index: 99999;
+    min-width: 250px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 10px #333333;
+    -webkit-box-shadow: 1px 3px 10px #333333;
+    -moz-box-shadow: 1px 3px 10px #333333;
+    padding: 16px;
+}
+
+.ui-notification-title{
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.ui-notification-content{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.ui-notification-message{
+    width: 250px;
+    white-space:normal;
+    word-break:break-all;
+    word-wrap:break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.ui-close-i{
+    color:#999999;
+    float: right;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.ui-close-i:hover{
+    color: #666666;
+}

@@ -1,0 +1,322 @@
+﻿body, button, input, select, textarea, p, span {
+    /*font-family:Tahoma,sans-serif,'宋体', Microsoft YaHei,  Helvetica, Arial, "\5b8b\4f53" ;*/
+    font: 14px/1.5 Microsoft YaHei,arial,tahoma, "Hiragino Sans GB", 宋体, sans-serif;
+}
+
+.Nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #3b444f;
+    width: 80px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+    .menu .li-first {
+        height: 85px;
+        width: 100%;
+        border-bottom: 1px solid #5e6a73;
+    }
+
+        .menu .li-first > a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding-top: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fefefe;
+        }
+
+            .menu .li-first > a > i {
+                display: block;
+                font-size: 32px;
+                line-height: 32px;
+            }
+
+            .menu .li-first > a > span {
+                font-size: 14px;
+                line-height: 28px;
+            }
+
+            .menu .li-first > a:hover {
+                background-color: #fff;
+                color: #696969;
+                cursor: pointer;
+            }
+
+        .menu .li-first:hover .menu-second {
+            display: block;
+        }
+
+    .menu .active {
+        background-color: #fff;
+        color: #696969;
+        cursor: pointer;
+    }
+
+        .menu .active i {
+            color: #696969;
+        }
+
+        .menu .active span {
+            color: #696969;
+        }
+
+.menu-second {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    left: 80px;
+    top: 0;
+    background-color: #fff;
+    border: 1px solid #10b47d;
+    z-index: 1000;
+    border-left: none;
+    display: none;
+}
+
+    .menu-second .second-menuTitle {
+        background-color: #10b47d;
+        color: #fff;
+        opacity: 0.9;
+        padding-left: 32px;
+        height: 47px;
+        line-height: 48px;
+        vertical-align: middle;
+    }
+
+        .menu-second .second-menuTitle > i {
+            font-size: 16px;
+        }
+
+        .menu-second .second-menuTitle > span {
+            margin-left: 6px;
+            font-size: 16px;
+        }
+
+    .menu-second ul {
+        list-style: none;
+        padding-left: 16px;
+        padding-top: 16px;
+        padding-right: 16px;
+    }
+
+    .menu-second > ul > li {
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        border-bottom: 1px solid #c2c7cb;
+    }
+
+        .menu-second > ul > li > a {
+            display: block;
+            padding-left: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #2c3643;
+        }
+
+            .menu-second > ul > li > a:hover {
+                font-weight: 900;
+                background-color: #dbe6ec;
+                font-size: 15px;
+                border-bottom: 1px solid #adb8bf;
+            }
+
+  
+     .menu-second .active {
+        font-weight: 900;
+        background-color: #dbe6ec;
+        font-size: 15px;
+        border-bottom: 1px solid #adb8bf;
+    }
+.CusCon {
+    margin-left: 80px;
+    overflow: hidden;
+}
+
+.customHeader {
+    background-color: #288ad6;
+    height: 48px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.headLeft {
+    float: left;
+    display: inline-block;
+}
+
+    .headLeft > img {
+        height: 32px;
+        width: 32px;
+        margin: 8px;
+        margin-left: 18px;
+        float: left;
+    }
+
+    .headLeft > span {
+        color: #fff;
+        font-weight: bold;
+        font-size: 22px;
+        margin-left: 8px;
+        line-height: 48px;
+        font-style: italic;
+    }
+
+.sysChange {
+    display: inline-block;
+    line-height: 48px;
+    height: 28px;
+    margin-top: 12px; /*设置元素margin-bottom为8=48-28-12,流式布局直接设置该属性会无效*/
+    margin-left: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+    .sysChange:hover {
+        text-decoration: none;
+    }
+
+    .sysChange .sysChangeText {
+        margin-left: 5px;
+    }
+
+.headRight {
+    height: 100%;
+    float: right;
+    margin-right: 16px;
+    color: #fff;
+    font-size: 12px;
+    text-align: right;
+}
+
+    .headRight .timeShow {
+        line-height: 24px;
+    }
+
+    .headright .logInfo {
+        line-height: 24px;
+    }
+
+.UserIcon {
+    color: #0edda3;
+    margin-right: 5px;
+}
+
+.logInfo .userNm {
+    color: #fff;
+    margin-right: 12px;
+}
+
+.logInfo .seperate {
+    color: #696969;
+}
+
+.logInfo .logOutBtn .logOutText {
+    margin-left: 5px;
+    color: #fff;
+}
+
+.logInfo .logOutBtn .logOutIcon {
+    color: #fa5e5b;
+    margin-left: 12px;
+}
+
+.logInfo .logOutBtn .logOutFont {
+    cursor: pointer;
+}
+
+    .logInfo .logOutBtn .logOutFont:hover {
+        text-decoration: none;
+    }
+
+#mainContent {
+    background-color: #e6eef2;
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+}
+
+#backContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    background-color: white;
+    border: 1px solid red;
+    z-index: 500;
+    transition: all 1s;
+}
+
+.no_v {
+    right: -600px;
+}
+
+.ab_v {
+    right: 0;
+}
+
+.mybtn-close-default {
+    height: 28px;
+    width: 28px;
+    color: #444;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+#close-btn-info {
+    position: absolute;
+    top: -4px;
+    left: 5px;
+    display: inline-block;
+    line-height: 35px;
+    margin-left: 5px;
+}
+
+.mybtn-close-default:before {
+    content: '×';
+}
+
+.mybtn-close-default:hover {
+    color: #a94442;
+}
+
+.mybtn-close-default:focus {
+    color: #a94442;
+}
+
+.section-wrap {
+    height: 100%;
+    overflow: visible; /*剪切掉第二屏的内容，即禁止滚动条的出现*/
+    transition: transform 1s cubic-bezier(0.86,0,0.03,1);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.86,0,0.03,1);
+}
+
+    .section-wrap .section {
+        position: relative; /*有了这个相对定位才能实现滚屏*/
+        height: 100%;
+        /*overflow-y: auto; /*单屏内容超出范围的显示用*/
+        /* overflow-x: auto;*/
+        /* padding: 16px; /*照理这块的内容应该不出现在这里，单一职责原则*/
+    }
+
+.put-section-0 {
+    transform: none;
+    -webkit-transform: none;
+}
+
+.put-section-1 {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+}

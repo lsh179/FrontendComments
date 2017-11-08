@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script src="MVVM/namespace.js"></script>
+    <script src="MVVM/Collection.js"></script>
+    <script src="MVVM/core.js"></script>
+    
+    <script src="MVVM/Directive.js"></script>
+    
+    <script src="MVVM/Observer.js"></script>
+
+
+</head>
+<body>
+
+    <div lm-controller="root">
+        {{str}}
+    </div>
+
+
+<!--
+    <div class="table-container" style="height: 150px;">
+        <div class="table">
+            <div class="head">
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+            </div>
+            <div class="content">
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>               
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>               
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>               
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>               
+                    </div>                                    
+            </div>
+        </div>
+    </div>
+-->
+    
+    <script>
+        //var m = new mydd();
+        // m.ajax("get", "index.css", function(res) {
+        //     console.log(res);
+        // });
+    </script>
+
+    <script>
+        $(window).ready(function(){      
+            var model2 = MVVM.define({
+            name: "root",
+            str: "v1.0",
+            arr: [1,2,3],
+            obj: {x:"aa", y:"bb"},
+
+            f: function() {
+                var a= 1;
+                console.log(a);
+            }
+        });
+        MVVM.scan();})
+
+    </script>
+
+</body>
+</html>

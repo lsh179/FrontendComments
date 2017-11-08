@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript" src="Scripts/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/Utils/CompentUtil.js"></script>
+    <script type="text/javascript" src="Scripts/lm-feed-back/lmfeedback.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-select/jquery.easydropdown.js"></script>
+
+    <script type="text/javascript" src="Scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/datetimepicker/js/datepicker.min.js"></script>
+    <script type="text/javascript" src="Scripts/datetimepicker/js/i18n/datepicker.zh.js"></script>
+    <script type="text/javascript" src="Scripts/pager/js/pager.js"></script>
+    <script type="text/javascript" src="http://192.168.1.45/Scripts/jquery_confirm/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="Scripts/Uploader/js/jquery.uploader.js"></script>
+    <script type="text/javascript" src="Scripts/SocketManager.js"></script>
+
+    <script type="text/javascript" src="libs/MVVM/namespace.js"></script>
+    <script type="text/javascript" src="libs/MVVM/lib/underscore.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Collection.js"></script>
+    <script type="text/javascript" src="libs/MVVM/core.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Directive.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Observer.js"></script>
+    <script type="text/javascript" src="Scripts/MessageManager.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="Content/font-awesome/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/font-lm/style.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/Default.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/themes/base/Comments.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/lm-feed-back/lmfeedback.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/jquery-select/easydropdown.css"/>
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.45/Scripts/jquery_confirm/jquery-confirm.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/Uploader/css/jquery.uploader.css"/>
+
+    <link type="text/css" rel="stylesheet" href="Scripts/bootstrap/css/bootstrap-theme.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/datetimepicker/css/datepicker.min.css"/>
+
+    <link type="text/css" rel="stylesheet" href="Scripts/pager/css/pager.css"/>
+
+<script>
+    var Sconfig={
+        SystemName:"事件管理系统",
+
+    };
+
+    var MyModel =MVVM.define({
+        name:"MyModel",
+        LoginName:"未登录",
+        UnreadTotalcount:0,
+        AllMessages:[],
+        MessageVisable:false,
+        ViewLists:function (ele, model) {
+           model.MessageVisable = !model.MessageVisable;
+           if(model.MessageVisable)
+           {
+               model.Freash(null,model);
+           }
+        },
+        Freash:function (ele,model) {
+            socketCore.FreashUserMessage();
+        },
+        Moreclick:function (ele,model) {
+
+        },
+    });
+    $(function () {
+        $.showMDialog({title:"登陆窗口",width:400,height:150
+        ,Content:'<div style="line-height: 30px;text-align: center;"><div style="width: 100%;text-align: left;"><span style="width: 120px;text-align: right;display: inline-block;">用户名:</span><input type="text" name="uname" style="width: 180px;"/></div><div style="text-align: left;width: 100%;"><span style="width: 120px;text-align: right;display: inline-block;">密码:</span><input type="password" name="password" style="width: 180px;"/></div><div style="display: inline-block"><button style="width: 70px;height: 24px;margin: 10px;" mdialogbtn="confirm">登陆</button><button  mdialogbtn="close" style="width: 70px;height: 24px;margin: 10px;">关闭</button></div></div>'
+        ,OnConfirm:function (content) {
+            var uname = content.find("input[name=uname]").val();
+            var password = content.find("input[name=password]").val();
+            if(!uname||!password)
+            {
+                $.showMessage({message:"用户名和密码不能为空"});
+                return false;
+            }else {
+                var def = $.Deferred();
+                $.ajax({
+                    url: "http://192.168.1.45:801/LoginRequest.ashx",
+                    type: "post",
+                    data: {username:uname,password:password,rem:true},
+                    dataType: 'json',
+                    async: false,
+                    success: function (data, textStatus, xhr, a, b, c) {
+                        if(data.Pass)
+                        {
+                            var uid = data.AuthenticationToken.User.UID;
+                            MyModel.LoginName = data.AuthenticationToken.User.RealName;
+                            var token = data.AuthenticationToken.Token;
+                            setCookie("userid",uid);
+                            setCookie("lb_token",token);
+                            InitSocket();
+                        }else {
+                            $.showMessage({message:data.ErrorMessage});
+                            return false;
+                        }
+                    },
+                    error: function (x, e) {
+                    },
+                    complete: function (x) {
+                    }
+                });
+                return def.promise();
+            }
+        }
+        });
+        //MVVM.scan();
+    });
+    
+    function InitSocket() {
+      //  SetUserMessage();
+        Sconfig.UID= getCookie("userid");
+        Sconfig.Token =getCookie("lb_token");
+        MessageManagerModel.Init($("#content"),Sconfig.UID,"用户名");
+        socketCore.LoadConfig("http://192.168.1.45:99/api/MessageServer/SocketServerConfig",Sconfig);
+    }
+    function SetUserMessage() {
+        socketCore.SetReciverMessageAction(function (msg) {
+            if(MyModel.MessageVisable)
+            {
+                MyModel.Freash(null,MyModel);
+            }
+        },function (allmsgs) {
+            MyModel.AllMessages = allmsgs.select(function (m) {
+                var nobj = $.extend({},m);
+                nobj.ReadMessage=function (ele,model) {
+                    alert(model.Content);
+                    if(!model.Read)
+                    {
+                        socketCore.ReadUserMessage(model);
+                    }
+                    MyModel.Freash(null,MyModel);
+                };
+                if(!m.AutoRead)
+                {
+                    nobj.Mntype="消息";
+                }else {
+                    nobj.Mntype="通知";
+                }
+                if(m.Read)
+                {
+                    nobj.FontColor="#ccc";
+                }else {
+                    nobj.FontColor="#000";
+                }
+                return nobj;
+            });
+        },function (tcount) {
+            MyModel.UnreadTotalcount = tcount;
+        });
+    }
+
+    
+</script>
+</head>
+
+<body >
+<div id="content">
+
+</div>
+<div lm-controller="MyModel">
+    <span>当前登陆人：</span><span>{{LoginName}}</span>
+    <span>未读消息信息：</span><span lm-text="UnreadTotalcount"></span>
+    <button lm-click="ViewLists">查看列表</button>
+    <div lm-vcase="MessageVisable" vcaseexp="MessageVisable">
+        <button lm-click="Freash">刷新</button>
+        <button lm-click="Moreclick">加载更多</button>
+        <ul>
+           <li lm-forjsons="AllMessages" lm-eon-dblclick="ReadMessage" lm-css-color="FontColor"><span>[{{Mntype}}]</span><span>{{Title}}[{{Sendor}}/{{SendTime}}]</span></li>
+        </ul>
+    </div>
+</div>
+<div class="content" lm-controller="MessageManagerModel">
+    <div class="MessageBox">
+        <div class="Message_fold"lm-vcase="MessageBoxView" vcaseexp="MessageBoxView==false" >
+            <div  lm-click="ShowMessageBox" ><i class="fa fa-envelope-o"></i><span class="altinfo" lm-vcase="UserMessageUnread" vcaseexp="UserMessageUnread&gt;0"></span>消息(<span lm-text='UserMessageUnread'></span>)</div>
+            <div lm-click="ShowMessageBox"  lm-vcase="SeeP2p" vcaseexp="SeeP2p==true"><i class="fa fa-comments-o"></i><span class="altinfo" lm-vcase="P2pMessageUnread" vcaseexp="P2pMessageUnread&gt;0"></span>聊天(<span lm-text='P2pMessageUnread'></span>)</div>
+        </div>
+        <div class="Message_Window"  lm-vcase="MessageBoxView" vcaseexp="MessageBoxView==true" >
+            <div class="header">
+                <div class="title" lm-text="MessageBoxTitle"></div>
+                <div class="right">
+                    <div style="display: inline-block;width: 100px;" lm-vcase="SeeP2p" vcaseexp="SeeP2p==true">
+                        <select  lm-text="ViewMessageType" class="dropdown">
+                            <option value="0">查看消息</option>
+                            <option value="1">站内聊天</option>
+                        </select>
+                    </div>
+                    <span lm-click="closeMessageWindow"><i class="fa fa-close"></i></span>
+                </div>
+            </div>
+            <div class="bcontent">
+                <div class="P2pMessageLists" lm-vcase="ViewMessageType" vcaseexp="ViewMessageType==1" >
+                    <div class="leftuser">
+                        <div class="navbox">
+                            <ul class="nav">
+                                <li lm-forjsons="P2pShowUsers" lm-click="SelectUser" lm-if="OnlineState==false"><a href="#" lm-text="Label"></a></li>
+                                <li lm-forjsons="P2pShowUsers" lm-click="SelectUser"><a href="#" style="color:red">{{Label}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rightbody">
+                        <div class="contentbtn" lm-click="FreashMoreMsg"><span>查看更多</span></div>
+                        <div>
+                            <div lm-forjsons="P2pShowMessages"  lm-if="Sendid==$model$.CUid" class="P2pMessageLeftItem">
+                                <div class="UName" lm-text="Sendor"></div>
+                                <div class="MContent" lm-text="Content">
+                                    <div class="STime" lm-text="Sendtime"></div>
+                                </div>
+                            </div>
+
+                            <div  class="P2pMessageRightItem">
+                                <div class="UName" lm-text="Sendor"></div>
+                                <div class="MContent">{{Content}}
+                                    <div class="STime" lm-text="Sendtime"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messageinput">
+                        <input type="text" lm-text="InputP2pmessage"/><button lm-click="SendP2pMsg">发送</button>
+                    </div>
+                </div>
+                <div class="UserMessageLists"  lm-vcase="ViewMessageType" vcaseexp="ViewMessageType==0" >
+                    <div>
+                        <div lm-forjsons="UserMessageLists" class="UserMessageItem">
+                            <div class="UName" lm-text="Sendor"></div>
+                            <div class="UmessageType">
+                                <span lm-vcase="AutoRead" vcaseexp="AutoRead==false">消息</span>
+                                <span lm-vcase="AutoRead" vcaseexp="AutoRead==true">通知</span>
+                            </div>
+                            <div class="MContent"><span  lm-click="ReadMessage" lm-css-color="FontColor">{{Title}}</span>
+                                <div class="STime" lm-text="SendTime"></div>
+                            </div>
+                            <!--<div class="Close" lm-vcase="Read" vcaseexp="Read==true"><i class="fa fa-close"></i></div>-->
+                        </div>
+                    </div>
+                    <div class="contentbtn"><span lm-click="loadmoreUserMessage">查看更多</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="indexModel.js" type="text/javascript"></script>
+</html>

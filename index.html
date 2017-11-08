@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript" src="Scripts/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/Utils/CompentUtil.js"></script>
+    <script type="text/javascript" src="Scripts/lm-feed-back/lmfeedback.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-select/jquery.easydropdown.js"></script>
+
+    <script type="text/javascript" src="Scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/datetimepicker/js/datepicker.min.js"></script>
+    <script type="text/javascript" src="Scripts/datetimepicker/js/i18n/datepicker.zh.js"></script>
+    <script type="text/javascript" src="Scripts/pager/js/pager.js"></script>
+    <script type="text/javascript" src="http://192.168.1.45/Scripts/jquery_confirm/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="Scripts/Uploader/js/jquery.uploader.js"></script>
+
+    <script type="text/javascript" src="libs/MVVM/namespace.js"></script>
+    <script type="text/javascript" src="libs/MVVM/lib/underscore.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Collection.js"></script>
+    <script type="text/javascript" src="http://192.168.1.45/libs/MVVM/core.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Directive.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Observer.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="Content/font-awesome/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/font-lm/style.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/Default.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/layout/layout_business.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/themes/base/Comments.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/lm-feed-back/lmfeedback.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/jquery-select/easydropdown.css"/>
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.45/Scripts/jquery_confirm/jquery-confirm.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/Uploader/css/jquery.uploader.css"/>
+
+    <link type="text/css" rel="stylesheet" href="Scripts/bootstrap/css/bootstrap-theme.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/datetimepicker/css/datepicker.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/datetimepicker/css/datepicker.css"/>
+
+    <link type="text/css" rel="stylesheet" href="Scripts/pager/css/pager.css"/>
+
+
+
+
+</head>
+<body >
+
+<div class="MainContent" style="display: none">
+    <div class="lm-abo-top MHeader" style="background-color: #2aabd2"></div>
+    <div class="lm-abo-bottom MContent" style="background-color: #2b542c">
+        <div class="MainContainer">
+            <div class="lm-abo-left" style="background-color: #8a6d3b"></div>
+            <div class="lm-abo-right" style="background-color: #761c19">
+                <div class="tableview">
+                    <div class="lm-abo-top" style="background-color: #5392b5">
+                        <div>sdsadasdadsadsadsadasds</div>
+                        <div>sdsadasdadsadsadsadasds</div>
+                        <div>sdsadasdadsadsadsadasds</div>
+                    </div>
+                    <div class="lm-abo-bottom" style="top: 84px;background-color: #9acfea">
+                        <div class="ContentInfo">
+                            <div class="lm-abo-left" style="background-color: #ffffff">
+                                <div>
+                                    <button class="lm-btn lm-btn-default">默认按钮</button>
+                                    <button class="lm-btn lm-btn-theme">主题按钮</button>
+                                    <button class="lm-btn lm-btn-green">强调按钮</button>
+                                </div>
+                                <table class="lm-table" style="margin-top: 20px">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>事件类型</th>
+                                        <th>事件总数</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>水务类</td>
+                                        <td>1200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>GIS信息类</td>
+                                        <td>234</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="lm-abo-right" style="background-color: #4a4a4a"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main" lm-controller="IndexModel">
+
+    <div lm-subdomain="UName">
+        <span>{{name222}}</span>
+        <select lm-text="n">
+            <option lm-foritems="names" value="{{value}}">{{value}}</option>
+        </select>
+        <select lm-text="n">
+            <option lm-forjsons="xxxx" value="{{yyy}}">{{yyy}}</option>
+        </select>
+    </div>
+    <div lm-subdomain="UTools">
+        <span title="{{name222}}">{{name222}}</span>
+        <button class="lm-btn lm-btn-default" lm-click="onClick">{{name222}}</button>
+    </div>
+
+
+    <div style="padding: 12px">
+        <button class="lm-btn">基础按钮</button>
+        <button class="lm-btn lm-btn-small">小按钮</button>
+        <button class="lm-btn lm-btn-large">大按钮</button>
+        <button class="lm-btn lm-btn-default">默认按钮</button>
+        <button class="lm-btn lm-btn-default" disabled="disabled">禁用按钮</button>
+        <button class="lm-btn lm-btn-theme">主题按钮</button>
+        <button class="lm-btn lm-btn-green">强调按钮</button>
+        <button class="lm-btn lm-btn-theme lm-btn-h"><i class="fa fa-camera"></i>水平按钮</button>
+        <button class="lm-btn lm-btn-v"><i class="fa fa-camera"></i>垂直按钮</button>
+        <button class="lm-btn lm-btn-green"><i class="fa fa-camera"></i></button>
+    </div>
+
+    <div style="padding: 12px">
+        <div style="width: 300px">
+            <input class="lm-input lm-input-shadow lm-input-small" placeholder="请输入信息">
+        </div>
+        <input class="lm-input lm-input-shadow lm-input-small" style="width: 200px" placeholder="请输入信息">
+        <input class="lm-input lm-input-shadow lm-input-default" placeholder="请输入信息">
+        <input class="lm-input lm-input-shadow lm-input-large" placeholder="请输入信息">
+        <div class="lm-input-group" style="display: inline-block;">
+            <input class="lm-input lm-input-default lm-input-shadow" placeholder="请输入信息">
+            <button class="lm-btn lm-btn-default" >选择</button>
+        </div>
+        <textarea class="lm-textarea lm-input-shadow lm-textarea-padding" cols="50" rows="5" placeholder="请输入你要说明的描述"></textarea>
+
+        <table class="lm-table" style="margin-top: 20px">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>事件类型</th>
+                <th>事件总数</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>水务类</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>GIS信息类</td>
+                <td>234</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="padding: 12px">
+
+        <div style="width: 176px;display: inline-block">
+            <select class="dropdown" lm-change="onSelectChange" lm-text="selectId">
+                <option lm-forjsons="selectItem" value="{{item}}">{{item}}</option>
+            </select>
+        </div>
+        <div id="mytest"><span lm-forjsons="selectItem" value="{{item}}">{{item}}</span></div>
+
+    </div>
+
+    <div>
+        <select class="testselect" lm-text="selectId">
+            <option lm-forjsons="selectItem" value="{{item}}">{{item}}</option>
+        </select>
+    </div>
+
+    <div class="lm-btn-group" style="display: inline-block;margin-left: 30px;">
+        <button class="lm-btn lm-btn-default selected">按钮一</button>
+        <button class="lm-btn lm-btn-default">按钮二</button>
+        <button class="lm-btn lm-btn-default">按钮三</button>
+        <span class="lm-link-btn">
+            <a>高级查询</a>
+        </span>
+    </div>
+
+    <div style="padding: 12px">
+        <div class="form_datetime" style="width: 300px">
+            <div class="form_datetimecontent">
+                    <span class="datepickerinput" value="">
+                        <input lm-bindway="all" size="16" type="text" lm-text="Repairtime">
+                    </span>
+                <div class="datepickerbutton add-on"><i></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button id="testbtn">测试上传</button>
+    </div>
+
+    <div style="padding: 20px">
+        <div class="lm-input-group">
+            <input class="lm-input lm-input-default lm-input-shadow" disabled="disabled">
+            <button class="lm-btn lm-btn-default">选择</button>
+        </div>
+        <button class="lm-btn lm-btn-theme">上传</button>
+    </div>
+
+    <div class="uploadFiles">
+        <span class="info" style="display: block">sssssssssssssss</span>
+    </div>
+
+</div>
+
+</body>
+<script src="indexModel.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){
+
+        $(".form_datetimecontent").lmdatepicker({});
+
+        $(".testselect").on("change",function(){
+            alert("select");
+        });
+        $(".test").append($('<span>测试</span>'));
+
+        $(".info").text("333333333333");
+        $('.lm-btn-small').on('click',function(){
+            $.showMessage({message:'我就是提示信息!'})
+        });
+        $('.lm-btn-theme').on('click',function(){
+            $.showModal(
+                    {
+                        title:'提示',
+                        message:'您确定要这么做吗?',
+                        ok:function(val){
+                            $.showMessage({message:"操作成功",type: $.MessageType.Success});
+                        }
+                    })
+        });
+        $('.lm-btn-green').on('click',function(){
+            $.showModal(
+                    {
+                        title:'保存提示',
+                        message:'请您输入保存的名称',
+                        type: $.ModalType.Input,
+                        ok:function(val){
+                            $.showMessage({message:"保存"+val+"失败",type: $.MessageType.Error});
+                        }
+                    })
+        });
+
+        $('.lm-btn-v').on('click',function(){
+            $.showNotification(
+                    {
+                        title:'事件消息',
+                        message:'你收到一条新的事件,请及时处理!你收到一条新的事件,请及时处理!你收到一条新的事件,请及时处理!你收到一条新的事件,请及时处理!',
+                        type: $.NotificationType.Warning,
+                        see:function(val){
+                            $.showMessage({message:"保存"+val+"失败",type: $.MessageType.Error});
+                        }
+                    })
+        });
+
+        $('.lm-btn-group > .lm-btn').on('click',function(){
+            $('.lm-btn-group > .lm-btn').removeClass('selected');
+            $(this).addClass("selected");
+        });
+//        var uploader = $("body").noclickuploader({},{indenty:'FD678D87-5BE2-4BCA-A891-5F5965EFE693',indentyDisplay:'管理员',project:'事件管理系统',fileCheckService:'http://192.168.1.45:804/ManagerService.asmx/CheckFile',fileUploadService:'http://192.168.1.45:804/ManagerService.asmx/uploadFile'})
+//        $("#testbtn").click(function () {
+//            uploader.show(function (rto, source) {
+//                alert(JSON.stringify(rto));
+//            })
+//        });
+
+        var fileUpLoader = $('.uploadFiles').initUploader({},
+                {
+                    indenty:'FD678D87-5BE2-4BCA-A891-5F5965EFE693',
+                    indentyDisplay:'管理员',
+                    project:'事件管理系统',
+                    fileCheckService:'http://192.168.1.45:804/ManagerService.asmx/CheckFile',
+                    fileUploadService:'http://192.168.1.45:804/ManagerService.asmx/uploadFile',
+                    previewService:'http://192.168.1.45:804/IMG/Thumbnail'
+                });
+
+        var finishFile = [];
+        var testOne = {id:"f9bf4cb9-b4f2-4ab0-9356-badefc0e6f7e",filename:"1-2-3 录入执行信息.png",extension:".png"};
+        var testTwo = {id:"7d2ab526-4a76-45ae-a25d-f62438586e67",filename:"1-2-4-1 录入人工费用.png",extension:".png"};
+        finishFile.push(testOne);
+        finishFile.push(testTwo);
+
+        fileUpLoader.show(
+                function(rto, source){
+                    $(".info").text(JSON.stringify(rto));
+                    $(".uploadFiles").append($('<span style="display: block">'+JSON.stringify(rto)+'</span>')) ;
+                },
+                function(res){
+                    alert(JSON.stringify(res));
+                },
+                []
+        );
+    });
+</script>
+
+</html>

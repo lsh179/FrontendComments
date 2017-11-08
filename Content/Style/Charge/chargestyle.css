@@ -1,0 +1,922 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+
+/**工程阶段样式显示**/
+.QIANJIJIEDUAN {
+    color: #e85755;
+}
+
+.SHIGONGJIEDUAN {
+    color: #2985cc;
+}
+
+.JUNGONGJIEDUAN {
+    color: #08a973;
+}
+
+
+
+.theme-Content-bgColor {
+    background-color: #f0f0f0;
+}
+
+.theme-head-bgColor {
+    background-color: #529eeb;
+}
+
+.theme-import-bgColor {
+    background-color: #3b83ef;
+}
+
+
+a {
+    color: #3b83ef;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.my-radio {
+    display: inline;
+    color: #3b83ef;
+}
+
+.data-box table {
+    background-color: #fff;
+    border-width: 1px;
+    border-color: #cccccc;
+}
+.table-bordered {
+    border: 1px solid #cacaca;
+}
+
+.data-box .table-default {
+    background-color: #f7f7f7;
+}
+
+.data-box >table > thead > tr > th {
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: bold;
+    vertical-align: middle;
+    border-width: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.data-box >table > thead > tr > th .sortcol {
+    float: right;
+    display: block;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.data-box >table > thead > tr > th .sortcol > i {
+        color: #555555;
+        font-size: 9px;
+        line-height: 9px;
+        display: block;
+    }
+
+.data-box >table > thead > tr > th .asc .down {
+    color: #b9b8b8;
+    font-size: 9px;
+    line-height: 9px;
+    display: block;
+}
+
+.data-box >table > thead > tr > th .desc .top {
+    color: #b9b8b8;
+    font-size: 9px;
+    line-height: 9px;
+    display: block;
+}
+
+.data-box >table > thead > tr > th:first-child {
+    border-left: 0px;
+}
+
+.data-box >table > thead > tr > th:last-child {
+    border-right: 0px;
+}
+
+.data-box >table > tbody > tr {
+    background-color: transparent;
+}
+
+.data-box >table > tbody > tr >td {
+    border-left-width: 0;
+    border-right-width: 0;
+    padding-top: 5px; 
+    padding-bottom: 5px;
+}
+.data-box >table > tbody > tr >td .data-toggle {
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+    height: 22px;
+    width: 100%;
+}
+.data-box >table > tbody > tr >td .data-toggle-2 {
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+    height: 44px;
+    width: 100%;
+}
+
+
+.data-box table > tbody > tr.active > td {
+    background-color: #cfe0f1;
+}
+.data-box .table-hover > tbody > tr:hover {
+    background-color: #cfe0f1;
+}
+
+.data-box .table > tbody > tr.active > td,
+.data-box .table > tbody > tr.active > td:hover {
+    background-color: #cfe0f1;
+}
+
+.data-box table > tbody > tr > td > a {
+    color: #3b83ef;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.data-box table > tbody > tr > td {
+    font-weight: normal;
+}
+
+
+.data-box table > tbody > tr > td > input[type="button"] {
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #cccccc;
+    padding: 0 3px 0 3px;
+    margin-right: 10px;
+    color: #3b444f;
+    border-radius: 2px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 2px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 2px; /* Webkit浏览器的私有属性 */
+}
+
+
+/* 页面布局*/
+
+.pagehead {
+    position: relative;
+    padding: 0px 0 0 15px;
+    margin: 0 -16px 0 -16px;
+    border-bottom: solid #ccc7c0 1px;
+    background-color: transparent;
+}
+
+.pagetitlediv {
+    margin-bottom: 15px;
+    padding: 1px 0 1px 10px;
+    border-left: 5px solid #3b83ef;
+}
+
+.pagehead h4 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.searchdiv {
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: left;
+    color: #6c7480;
+    width: 250px;
+    margin: 0px;
+    float: left;
+    position: relative;
+}
+
+.searchdiv .searchioc {
+        position: absolute;
+        top: 9px;
+        left: 8px;
+        z-index: 10;
+        font-size: 14px;
+    }
+
+.othersearchdiv {
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: left;
+    color: #6c7480;
+    margin: 0px;
+    float: left;
+}
+
+
+.othersearchdiv .querycontroldiv {
+        height: 28px;
+        margin-bottom: 10px;
+        margin: 0px;
+        position: relative;
+        float: left;
+        margin-right: 0px;
+        margin-left: 13px;
+        overflow: visible;
+    }
+
+.othersearchdiv .btn-group.bootstrap-select .dropdown-toggle .filter-option {
+    padding-left: 35px;
+}
+
+.othersearchdiv .fourword .btn-group.bootstrap-select .dropdown-toggle .filter-option {
+    padding-left: 65px;
+}
+
+.othersearchdiv .querycontroldiv .querycontrolname {
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    z-index: 10;
+    color: #4f4f4f;
+}
+
+.searchdiv .inputquery {
+    border-radius: 3px 0 0 3px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0px;
+    font-size: 14px;
+    padding-left: 28px;
+}
+
+.searchdiv .btnquery {
+    color: #333;
+    border: 0px;
+    height: 32px;
+    border-radius: 0px  0;
+
+    line-height: 28px;
+    color: #fff;
+    height: 28px;
+    line-height: 28px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #21BCDB; 
+    color: #ffffff; 
+    font-size: 13px; 
+    padding-left: 19px; 
+    padding-right: 19px;
+     padding-top: 0px;
+}
+
+.othersearchdiv .bootstrap-select > .dropdown-toggle {
+    width: 160px;
+    height: 28px;
+}
+
+.othersearchdiv .bootstrap-select .btn {
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+.othersearchdiv .bootstrap-select .btn-default {
+    background-image: none;
+}
+
+.othersearchdiv .bootstrap-select .dropdown-menu {
+    width: 160px;
+}
+
+.othersearchdiv .btn-group.bootstrap-select .dropdown-menu {
+    width: 160px;
+    min-width: 0px;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 160px;
+}
+
+.othersearchdiv .bootstrap-select {
+    width: 160px;
+}
+
+.pagecontent {
+    margin: 0 -16px;
+    background-color: #fff;
+}
+
+.pagecontent .pagingdiv {
+    padding-bottom: 10px;
+}
+
+.pagecontent .pagingdiv span {
+    margin-right: 10px;
+}
+
+.pagecontent .pagingdiv a {
+    color: #3b83ef;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pagecontent .pagingdiv .disabled {
+    margin-right: 3px;
+    cursor: not-allowed;
+    text-decoration: underline;
+    color: #c1d7f7;
+}
+
+.RightPanel {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 780px;
+    height: 100%;
+    display: none;
+    z-index: 999;
+}
+
+.RightContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: white;
+    border-width: 0 0 0 1px;
+    box-shadow: -3px 0px 5px rgba(168, 163, 163, 0.69);
+}
+
+.RightContainer .Header {
+    height: 50px;
+    border-width: 0 0 1px 0;
+    border-bottom-color: #bcbcbc;
+    border-bottom-style: solid;
+}
+
+.RightContainer .Header .nclose {
+    width: 30px;
+    height: 30px;
+    border-width: 0;
+    border-color: transparent;
+    background-color: transparent;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #999999;
+    font-size: 15px;
+}
+
+.RightContainer .Header span {
+    color: #8c8c8c;
+    font-size: 14px;
+    line-height: 50px;
+}
+
+.RightContainer .Header .managerbtn {
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 28px;
+    line-height: 28px;
+}
+
+.RightContainer .Content {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 60px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.RightContainer .rightshowcontent {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    right: 15px;
+    padding-top: 15px;
+        
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.rightshowcontent  .data-box >table > tbody > tr >td {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+}
+
+.rightshowcontent .data-box .table-hover > tbody > tr:hover {
+    background-color: transparent;
+}
+
+.rightshowcontent .data-box .table > tbody > tr.active > td{
+    background-color: transparent;
+} 
+
+
+/*** 返回按钮样式 */
+@keyframes moup {
+    0% {
+        margin-top: 0px;
+    }
+
+    13% {
+        margin-top: 5px;
+    }
+
+    25% {
+        margin-top: 10px;
+    }
+
+    38% {
+        margin-top: 5px;
+    }
+
+    50% {
+        margin-top: 0px;
+    }
+
+    63% {
+        margin-top: -5px;
+    }
+
+    75% {
+        margin-top: -10px;
+    }
+
+    88% {
+        margin-top: -5px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@-webkit-keyframes moup /*Safari and Chrome*/
+{
+    0% {
+        margin-top: 0px;
+    }
+
+    13% {
+        margin-top: 5px;
+    }
+
+    25% {
+        margin-top: 10px;
+    }
+
+    38% {
+        margin-top: 5px;
+    }
+
+    50% {
+        margin-top: 0px;
+    }
+
+    63% {
+        margin-top: -5px;
+    }
+
+    75% {
+        margin-top: -10px;
+    }
+
+    88% {
+        margin-top: -5px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+.mooparent {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    left: -50%;
+    top: -12px;
+    background-color: rgba(0, 0, 0, 0.54);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+.mooparent:hover {
+        cursor: pointer;
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+
+.moo {
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 35px;
+    text-align: center;
+    padding: 0;
+    margin-left: 3px;
+    margin-right: auto;
+}
+
+.mooparent:hover .moo {
+    animation: moup 2s infinite;
+    -moz-animation: moup 2s infinite; /* Firefox */
+    -webkit-animation: moup 2s infinite; /* Safari 和 Chrome */
+    -o-animation: moup 2s infinite;
+}
+/*** 结束 */
+
+.handContent {
+    position: relative;
+    margin-top: 16px;
+}
+
+/** 工作流左侧列表样式*/
+.flowstep {
+    width: 284px;
+    border-style: solid;
+    position: absolute;
+    padding-left: 0px;
+    padding-right: 0px;
+    left: 16px;
+    bottom: 0px;
+    top: 0px;
+    padding: 0;
+    margin: 0;
+    border-width: 1px;
+    border-color: lightgrey;
+    border-style: solid;
+    border-radius: 3px;
+    border-top-width: 0;
+}
+
+.flowstep .flowstepcontents {
+        position: absolute;
+        top: 42px;
+        left: 0px;
+        width: 284px;
+        bottom: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+.flowstep .flowstepcontents > ul, ol {
+            margin: 0;
+            padding: 0;
+        }
+
+.flowstepcontents li span {
+    padding-left: 13px;
+}
+
+.flowstepcontents ol li span {
+    padding-left: 33px;
+}
+
+
+.flowstepcontents ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-color: #a8a8a8;
+    border-top-width: 1px;
+    border-top-style: solid;
+    font-size: 13px;
+}
+
+.flowstepcontents > ul > ol > li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-color: #a8a8a8;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.flowstep .flowstepheader {
+    width: 284px;
+    border-top-width: 0px;
+    line-height: 36px;
+    text-align: center;
+    height: 36px;
+    position: absolute;
+    border-radius: 4px 4px 0 0;
+    top: 0;
+    left: 0px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.flowstepcontents .selectItem span:first-child:before {
+    content: "\e127";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-right: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.flowstepcontents ul li span {
+    display: block;
+    max-height: 29px;
+    line-height: 29px;
+    overflow: hidden;
+}
+
+.flowstep .visstep {
+    cursor: pointer;
+    color: #2c3643;
+    text-decoration: none;
+}
+
+
+.flowstep .current {
+    color: #007bd9;
+    text-decoration: none;
+}
+
+.flowstep .unvisstep {
+    color: #979b9f;
+    text-decoration: none;
+}
+.flowstep .currentedit {
+    color: #e95312;
+    text-decoration: none;
+}
+
+
+.flowstep .visstep:not(.current) span:first-child:after {
+    content: "√";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-left: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.flowstep .current span:first-child:after {
+    content: "\270f";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-left: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.flowstep .currentedit:not(.current) span:first-child:after {
+    content: "";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-left: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.flowstep .nostep {
+    color: #979b9f;
+    text-decoration: line-through;
+}
+
+.rightshowcontent .taskstepname {
+    font-size: 13px;
+}
+.rightshowcontent .taskstepinfo span {
+    font-size: 11px;
+    /*padding-right: 10px;*/
+    color: #666;
+}
+.rightshowcontent .visstep {
+    cursor: pointer;
+    color: #2c3643;
+    text-decoration: none;
+}
+
+.rightshowcontent .current {
+    color: #007bd9;
+    text-decoration: none;
+}
+
+.rightshowcontent .unvisstep {
+    color: #979b9f;
+    text-decoration: none;
+}
+
+.rightshowcontent .currentedit {
+    color: #e95312;
+    text-decoration: none;
+}
+
+
+.rightshowcontent .visstep:not(.current):after {
+    content: "√";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-left: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.rightshowcontent .current:after {
+    content: "\270f";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-left: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.rightshowcontent .currentedit:not(.current):after {
+    content: "";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-left: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.rightshowcontent .nostep {
+    color: #979b9f;
+    text-decoration: line-through;
+}
+
+.rightshowcontent .subtab {
+    float: left;
+    display: block;
+    width: 48px;
+}
+/***结束*/
+
+/**自动表单样式**/
+.flowcontent {
+    position: absolute;
+    top: 0;
+    left: 316px;
+    right: 0;
+    padding-right: 15px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.flowcontent .header {
+        width: 100%;
+        height: 72px;
+        position: relative;
+        background-color: #f0f4f5;
+    }
+
+.flowcontent .header .name {
+            text-align: center;
+            color: #4f4f4f;
+            font-weight: bold;
+            font-size: 1.125em;
+            padding-top: 12px;
+            margin-bottom: 6px;
+        }
+
+.flowcontent .content-info {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.flowcontent .content-media {
+        position: absolute;
+        right: 15px;
+        bottom: 10px;
+        color: #333333;
+    }
+
+.flowcontent .steptitle {
+        margin-top: 24px;
+        margin-bottom: 0px;
+        margin-left: 16px;
+        font-weight: 600;
+        color: black;
+    }
+
+.flowcontent .stepForm {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+.ReMain_title_ParDiv {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+}
+
+
+.navTable {
+    height: 35px;
+}
+
+.navTable td {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    cursor: pointer;
+}
+
+.navTable td a {
+    color: #000;
+}
+
+.navTable .active {
+    background-color: #fff;
+    border-bottom: 0px solid #cccccc;
+    cursor: inherit;
+    border-top: 2px solid #cccccc;
+}
+
+
+
+/***加载等待圈*/
+.Loading {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0px;
+    background-color: transparent;
+    z-index: 99999;
+}
+
+
+.fileCount0 span:before {
+    content: "*";
+    color: red
+    /*position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-right: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;*/
+}

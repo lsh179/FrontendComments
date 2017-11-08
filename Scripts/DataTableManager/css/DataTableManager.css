@@ -1,0 +1,117 @@
+.lmtable{
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border: 0;
+}
+
+
+.lmtable th {
+    box-sizing: border-box;
+    /*background: -ms-linear-gradient(top, #54a3d1, #3d83a8);*/
+    /*background: -moz-linear-gradient(top,#54a3d1, #3d83a8);*/
+    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#54a3d1), to(#3d83a8));*/
+    /*color:white;*/
+    background-color: #e6edf0;
+    color: #444444;
+}
+
+.lmtable tbody tr:hover{
+    cursor: pointer;
+    background-color: #fef2e1;
+}
+
+.lmtable tr td{
+    box-sizing: border-box;
+}
+
+
+.lmtable th .sortcol{
+    display:block;
+    text-align: center;
+    height: 26px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.lmtable th .sortcol>div{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lmtable th .sortcol .sorttitle{
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    float: left;
+}
+.lmtable th .sortcol .sortspan{
+    display: inline-block;
+    height: 26px;
+    margin-left: 8px;
+}
+.lmtable th .sortcol .sortspan i{
+    display: block;
+    height: 13px;
+    font-size: 13px;
+    box-sizing: border-box;
+    color: white;
+}
+.lmtable th .sortcol .sortspan .fa-caret-up{
+    padding-top: 2px;
+}
+.lmtable th .sortcol .sortspan .fa-caret-down{
+    margin-top:-2px;
+}
+.lmtable th .sortcol .sortspan .select{
+    color:#f9d094;
+}
+
+.automatchtable tbody{
+    display: block;
+    position: relative;
+    overflow:auto;
+    border-spacing:0 ;
+    border: 0;
+    /*margin-top: -1px;*/
+    overflow-x:hidden;
+}
+.automatchtable thead tr {
+    position: relative;
+    display: table;
+    border: 1px solid #b6babf;
+    border-spacing: 0;
+    border-collapse: collapse;
+    /*margin-top: -1px;*/
+    height: 26px;
+}
+
+.automatchtable thead th{
+    border-right: 1px solid #b6babf;
+    cursor: pointer;
+}
+
+
+.automatchtable tbody tr{
+    position: relative;
+    display: table;
+    height: 26px;
+    cursor: pointer;
+}
+
+.automatchtable tr > td:first-child{
+    border-left: 1px solid #b6babf;
+}
+
+.automatchtable td{
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color:#b6babf ;
+}
+
+.automatchtable td span{
+    display: block;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-wrap: none;
+}

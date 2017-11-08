@@ -1,0 +1,16 @@
+E:\workspace\2016\FrontendComments\FrontendComments\bin\FrontendComments.dll.config
+E:\workspace\2016\FrontendComments\FrontendComments\bin\FrontendComments.dll
+E:\workspace\2016\FrontendComments\FrontendComments\bin\FrontendComments.pdb
+E:\workspace\2016\FrontendComments\FrontendComments\bin\AspNet.ScriptManager.jQuery.dll
+E:\workspace\2016\FrontendComments\FrontendComments\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+E:\workspace\2016\FrontendComments\FrontendComments\bin\EntityFramework.dll
+E:\workspace\2016\FrontendComments\FrontendComments\bin\EntityFramework.SqlServer.dll
+E:\workspace\2016\FrontendComments\FrontendComments\bin\Microsoft.Web.Infrastructure.dll
+E:\workspace\2016\FrontendComments\FrontendComments\bin\System.Web.Providers.dll
+E:\workspace\2016\FrontendComments\FrontendComments\bin\EntityFramework.xml
+E:\workspace\2016\FrontendComments\FrontendComments\bin\EntityFramework.SqlServer.xml
+E:\workspace\2016\FrontendComments\FrontendComments\bin\System.Web.Providers.xml
+E:\workspace\2016\FrontendComments\FrontendComments\bin\zh-Hans\EntityFramework.resources.dll
+E:\workspace\2016\FrontendComments\FrontendComments\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\workspace\2016\FrontendComments\FrontendComments\obj\Debug\FrontendComments.dll
+E:\workspace\2016\FrontendComments\FrontendComments\obj\Debug\FrontendComments.pdb

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?4d5okz');
+  src:  url('fonts/icomoon.eot?4d5okz#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4d5okz') format('truetype'),
+    url('fonts/icomoon.woff?4d5okz') format('woff'),
+    url('fonts/icomoon.svg?4d5okz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="dx-fa-"], [class*=" dx-fa-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dx-fa-gis-all:before {
+  content: "\e900";
+}
+.dx-fa-gis-area:before {
+  content: "\e901";
+}
+.dx-fa-gis-custom:before {
+  content: "\e902";
+}
+.dx-fa-gis-polygon:before {
+  content: "\e903";
+}
+.dx-fa-gis-rectangle:before {
+  content: "\e904";
+}
+

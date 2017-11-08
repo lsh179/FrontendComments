@@ -1,0 +1,225 @@
+﻿
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#file_effect_p {
+   text-align:center;
+}
+
+.inputfile + label {
+    transition: background-color linear 2s;
+    -moz-transition: background-color linear 2s; /* Firefox 4 */
+    -webkit-transition: background-color linear 2s; /* Safari 和 Chrome */
+    -o-transition: background-color linear 2s;
+    transition: color linear 0.3s;
+    -moz-transition: color linear 0.3s; /* Firefox 4 */
+    -webkit-transition: color linear 0.3s; /* Safari 和 Chrome */
+    -o-transition: color linear 0.3s;
+    background-color: white;
+    border: 1px solid #179EFA;
+    padding: 5px 10px 5px 10px;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    color: #179EFA;
+    font-weight: normal;
+}
+
+    .inputfile:focus + label,
+    .inputfile + label:hover {
+        background-color: #179EFA;
+        color: white;
+    }
+
+
+/*#submitLink*/
+.file_link {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    background-color: #179EFA;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.file-effect {
+    background-color: white;
+    color: #179EFA;
+    border: 1px solid #179EFA;
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.customer-file-effect {
+    background-color: white;
+    color: #179EFA;
+    border-width:1px;
+    border-style:solid;
+    border-color:white;
+    border-bottom-color:#179EFA;
+   
+    transition:all 1s;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    min-width: 70px;
+    max-width:80%;
+    position: relative;
+}
+
+.autoColumn {
+    width: auto;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.file-effect:hover {
+    background-color: white;
+    color: #179EFA;
+    cursor: default;
+}
+
+.error {
+    border-color: red;
+}
+
+.file-up::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: attr(data-name);
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    z-index: 3;
+    background-color: #179EFA;
+    
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.inputfile + label {
+    cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.lm-file input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    width: 185px;
+    cursor: pointer;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+.DisBox {
+    display: none;
+}
+
+.ImageBox {
+    position: absolute;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    margin: 10px auto 0 auto;
+    padding: 4px;
+    background-color: #f9f9f9;
+    border: 1px solid #E3E3E3;
+    border-radius: 2px;
+}
+
+.ImageBox > div {
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid #b8c0cc;
+    margin: 4px;
+    position: relative;
+}
+
+.ImageBox > div:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, .2);
+}
+
+.ImageBox > div img {
+    width: 141px;
+    height: 141px;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    margin: 5px;
+}
+
+
+.Loading{
+    background-color:rgba(0,0,0,0.3);
+    position: absolute;
+    bottom:5px;
+    width: 141px;
+    height: 146px;
+    margin-left: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Loading > span{
+    display: block;
+    line-height: 146px;
+}
+
+.ImageInfo{
+    position: absolute;
+    bottom:5px;
+    width: 141px;
+    margin-left: 5px;
+    height: 22px;
+    line-height: 22px;
+    background-color:rgba(0,0,0,0.6);
+    color: #FFFFFF
+}
+
+.ImageInfo > span{
+    display: inline-block;
+    width: 110px;
+    margin-left: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.ImageInfo > i{
+    float: right;
+    margin-top: 6px;
+    margin-right: 4px;
+}
+
+.ImageInfo > i:hover{
+    cursor: pointer;
+    color: #eeeeee;
+}
+
+.ImageInfo > i:active{
+    color: #bebebe;
+}

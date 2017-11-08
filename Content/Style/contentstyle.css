@@ -1,0 +1,755 @@
+﻿.mainFrameOuter {
+    height: 100%;
+    padding: 16px;
+    overflow: auto;
+    min-width: 1300px;
+}
+
+.mainFrameInner {
+    height: 100%;
+    background-color: #fff;
+}
+
+.mainFrameInner-Content {
+    background-color: #fff;
+}
+
+.mainFrameInner-PlaceHolder {
+    height: 16px;
+}
+
+.Main_title_ParDiv {
+    padding-left: 16px;
+    padding-top: 16px;
+    margin-bottom: 18px;
+}
+
+.Main_title_ParDivForToolBar {
+    margin-bottom: 12px;
+}
+
+.Main_title {
+    border-width: 0;
+    border-left-width: 5px;
+    border-style: solid;
+    border-left-color: #10b47d;
+    padding-left: 8px;
+    color: #030303;
+    font-size: 16px;
+    height: 20px;
+    display: inline;
+}
+
+.Main_ToolBar {
+    padding-left: 16px;
+    height: 28px;
+    margin-bottom: 18px;
+}
+
+.hrSeparate {
+    color: #10b47d;
+    margin: 0px;
+}
+
+.Main_content_ParDiv {
+    margin: 0;
+    padding: 16px;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.Main_content_ParDivSmallTop {
+    padding-top: 12px;
+}
+
+.categoryDiv {
+    margin-bottom: 20px;
+}
+
+.categoryItem {
+    font-size: 14px;
+    color: #000;
+    font-weight: 900;
+    width: 85px;
+    display: inline-block;
+}
+
+.tips {
+    color: #fa5e5b;
+    font-size: 12px;
+    margin-left: 12px;
+}
+
+.categoryNmParDiv {
+    margin-bottom: 12px;
+}
+
+.Field2ValueParDiv {
+    margin-bottom: 12px;
+}
+
+.normalField-parDiv {
+    display: inline-block;
+    width: 85px;
+    vertical-align: top;
+}
+
+.normalField-parDiv100 {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+}
+
+.normalField {
+    font-size: 13px;
+    color: #030303;
+    float: right;
+    line-height: 28px;
+    text-align: center;
+}
+
+.fieldValue-parDiv {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 12px;
+    margin-bottom: 0;
+}
+
+.inputTxt {
+    width: 180px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #c3c3c3;
+    background-color: transparent;
+    border-radius: 2px;
+    margin-left: 8px;
+    padding: 0px;
+    padding-left: 12px;
+}
+
+.inputTxt240 {
+    margin-left: 0px;
+    width: 240px;
+}
+
+.inputTxtLongWidth {
+    width: 320px;
+    margin-left: 0px;
+}
+
+.BtnImport {
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ffffff;
+    color: #0e9c6c;
+    border: 1px solid #c3c3c3;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 13px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+    .BtnImport:hover {
+        background-color: #0e9c6c;
+        color: #ffffff;
+    }
+
+.BtnExport {
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ffffff;
+    color: #2e96e6;
+    border: 1px solid #c3c3c3;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 13px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+    .BtnExport:hover {
+        background-color: #2e96e6;
+        color: #ffffff;
+    }
+
+.BtnQuery {
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 4px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #2e96e6;
+    color: #ffffff;
+    border: 1px solid #c3c3c3;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 13px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+    .BtnQuery:hover {
+        background-color: #ffffff;
+        color: #2e96e6;
+    }
+
+.BtnAdd {
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #10b47d;
+    color: #ffffff;
+    border: 1px solid #0fa673;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 13px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+    .BtnAdd:hover {
+        background-color: #ffffff;
+        color: #10b47d;
+    }
+
+.btnCancel {
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #f5f5f5;
+    color: #232b36;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 13px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+    .btnCancel:hover {
+        background-color: #232b36;
+        color: #f5f5f5;
+    }
+
+.BtnSbmit {
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #288ad6;
+    color: #ffffff;
+    border: 1px solid #247abd;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 13px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+    .BtnSbmit:hover {
+        background-color: #ffffff;
+        color: #288ad6;
+    }
+
+.BtnReSet {
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #f5f5f5;
+    color: #030303;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 13px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+    .BtnReSet:hover {
+        background-color: #030303;
+        color: #f5f5f5;
+    }
+
+.BtnEdit {
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ffffff;
+    color: #0e9c6c;
+    border: 1px solid #c3c3c3;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 13px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+    .BtnEdit:hover {
+        background-color: #0e9c6c;
+        color: #ffffff;
+    }
+
+.BtnDel {
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ffffff;
+    color: #fa5e5b;
+    border: 1px solid #c3c3c3;
+    display: inline-block;
+    border-radius: 2px;
+    vertical-align: middle;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+    .BtnDel:hover {
+        background-color: #fa5e5b;
+        color: #ffffff;
+    }
+
+.BtnSel {
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ffffff;
+    color: #faa937;
+    border: 1px solid #c3c3c3;
+    display: inline-block;
+    border-radius: 2px;
+    vertical-align: middle;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+    .BtnSel:hover {
+        background-color: #faa937;
+        color: #ffffff;
+    }
+
+#btnAddTxt {
+    margin-left: 5px;
+}
+
+.valueContainer {
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    width: 650px;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    display: inline-block;
+}
+
+.valueContainer-item {
+    margin-top: 12px;
+    margin-left: 12px;
+    padding-left: 12px;
+    padding-top: 2px;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    background-color: white;
+    height: 28px;
+    border-radius: 2px;
+}
+
+    .valueContainer-item > .itemTxt {
+        vertical-align: middle;
+    }
+
+    .valueContainer-item > .itemRemoveIcon {
+        margin-left: 24px;
+        margin-right: 8px;
+        cursor: pointer;
+        opacity: 0.4;
+        color: #2c3643;
+        vertical-align: middle;
+    }
+
+        .valueContainer-item > .itemRemoveIcon:hover {
+            color: aqua;
+        }
+
+.selectPicker {
+    height: 28px;
+    width: 85px;
+}
+
+.selectSty {
+    height: 28px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #fff;
+    border: 1px solid #c3c3c3;
+}
+
+.selectStyMargin {
+    margin-left: 8px;
+    height: 28px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #fff;
+    border: 1px solid #c3c3c3;
+    border-radius: 2px;
+}
+
+.selectStyWithoutBorder {
+    height: 28px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #fff;
+    border: 0px solid #c3c3c3;
+    position: absolute;
+    left: 8px;
+    top: 0px;
+}
+
+.selectStyFont12 {
+    height: 23px;
+    background-color: #fff;
+    border: 1px solid #c3c3c3;
+    color: #3b444f;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 6px;
+    padding-right: 0px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.valideDiv {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0px;
+    /*height: 28px;*/
+}
+
+.btnPageIndex {
+    background-color: transparent;
+    border: none;
+    color: #3b444f;
+    height: 23px;
+    line-height: 23px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.PageSeleted {
+    background-color: #297cbb;
+    color: #fff;
+}
+
+/*分页导航相关样式*/
+.btnPageIndex .SufixPrefix, .PageUnabled {
+    color: #D6D9DB;
+}
+
+
+.btnSortDown {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    cursor: pointer;
+}
+
+    .btnSortDown:hover {
+        color: red;
+    }
+
+.btnSortUp {
+    display: block;
+    top: 3px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+    .btnSortUp:hover {
+        color: red;
+    }
+
+.btnSortDownRight {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    cursor: pointer;
+}
+
+    .btnSortDownRight:hover {
+        color: red;
+    }
+
+.btnSortUpRight {
+    display: block;
+    top: 3px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+    .btnSortUpRight:hover {
+        color: red;
+    }
+
+.zxx_text_overflow_4 {
+    width: 24em;
+    height: 1.3em;
+    overflow: hidden;
+    zoom: 1;
+}
+
+    .zxx_text_overflow_4 .text_con {
+        float: left;
+        height: 1.3em;
+        margin-right: 3em;
+        overflow: hidden;
+    }
+
+    .zxx_text_overflow_4 .text_dotted {
+        width: 3em;
+        height: 1.31em;
+        float: right;
+        margin-top: -1.3em;
+    }
+
+.qryResultItem {
+    font-size: 16px;
+}
+
+    .qryResultItem:hover {
+        font-size: 16px;
+        background-color: aqua;
+    }
+
+.ClearBtn {
+    background-color: #79e4cf;
+    color: #ffffff;
+    text-align: center;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    position: absolute;
+    left: 230px;
+    top: 25px;
+    z-index: 99;
+}
+
+
+    .ClearBtn:hover {
+        background-color: #ffffff;
+        color: #79e4cf;
+    }
+
+
+.form-control28 {
+    height: 28px;
+}
+
+.spinner {
+    width: 56px;
+    height: 28px;
+}
+
+    .spinner input {
+        text-align: right;
+    }
+
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+    .input-group-btn-vertical > .btn {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 8px;
+        margin-left: -1px;
+        position: relative;
+        border-radius: 0;
+    }
+
+        .input-group-btn-vertical > .btn:first-child {
+            border-top-right-radius: 2px;
+        }
+
+        .input-group-btn-vertical > .btn:last-child {
+            margin-top: -2px;
+            border-bottom-right-radius: 2px;
+        }
+
+    .input-group-btn-vertical i {
+        position: absolute;
+        top: 0;
+        left: 4px;
+    }
+
+
+
+.ClearMapInfo {
+    color: #7F7F7F;
+    position: absolute;
+    padding: 12px;
+    left: 94px;
+    top: 16px;
+    border: 1px #cccccc solid;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+    .ClearMapInfo:hover {
+        color: #fff;
+        background-color: #7F7F7F;
+    }
+
+.SearchMap {
+    color: #7F7F7F;
+    position: absolute;
+    padding: 12px;
+    left: 133px;
+    top: 16px;
+    border: 1px #cccccc solid;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+    .SearchMap:hover {
+        color: #fff;
+        background-color: #7F7F7F;
+    }
+
+.ViewMapToolTip {
+    color: #7F7F7F;
+    position: absolute;
+    padding: 12px;
+    left: 169px;
+    top: 16px;
+    border: 1px #cccccc solid;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+    .ViewMapToolTip:hover {
+        color: #fff;
+        background-color: #7F7F7F;
+    }
+
+.HideMapToolTip {
+    color: #7F7F7F;
+    position: absolute;
+    padding: 12px;
+    left: 205px;
+    top: 16px;
+    border: 1px #cccccc solid;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+    .HideMapToolTip:hover {
+        color: #fff;
+        background-color: #7F7F7F;
+    }
+
+.DrawPolygon {
+    color: #7F7F7F;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    border: 1px #cccccc solid;
+    padding: 12px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+    .DrawPolygon:hover {
+        color: #fff;
+        background-color: #7F7F7F;
+    }
+
+.FinishEditInfo {
+    color: #7F7F7F;
+    position: absolute;
+    padding: 12px;
+    left: 55px;
+    top: 16px;
+    border: 1px #cccccc solid;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+    .FinishEditInfo:hover {
+        color: #fff;
+        background-color: #7F7F7F;
+    }
+
+.inputDate {
+    height: 28px;
+    padding-left: 9.3px;
+    color: #C3C3C3;
+    padding: 0;
+    padding-left: 10px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.inputDateWithText {
+    color: #3B444F;
+    height: 28px;
+    padding-left: 9.3px;
+    padding: 0;
+    padding-left: 10px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.btnDate {
+    width: 54px;
+    height: 28px;
+    padding-top: 2px;
+    border-radius: 2px;
+    color: #585E67;
+    background-color: #ffffff;
+}
+
+    .btnDate:hover, .btnDate:focus {
+        color: #ffffff;
+        background-color: #2E9CF0;
+    }
+
+.btnDateSel {
+    width: 54px;
+    height: 28px;
+    padding-top: 2px;
+    border-radius: 2px;
+    color: #ffffff;
+    background-color: #2E9CF0;
+}

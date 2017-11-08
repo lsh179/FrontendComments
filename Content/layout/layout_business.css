@@ -1,0 +1,501 @@
+/** 业务系统布局样式 */
+
+.lm-abo-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.lm-abo-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.lm-abo-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.lm-abo-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.Horizontal-Left {
+    display: inline-block;
+    float: left;
+}
+
+.Horizontal-Right {
+    display: inline-block;
+    float: right;
+}
+
+.MainContent {
+    height: 100%;
+    width: 100%;
+    min-height: 760px;
+    min-width: 1080px;
+    position: relative;
+    background-image: url(../../Images/mainbg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+}
+
+/** 头部 */
+.MHeader {
+    height: 50px;
+    left: 6px;
+    right: 6px;
+}
+
+.MHeader .logo {
+    display: table;
+    float: left;
+    width: auto;
+    padding-left: 39px;
+    height: 100%;
+}
+
+.MHeader .logo span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.MHeader .menu {
+    float: left;
+    height: 100%;
+    margin-left: 25px;
+    margin-right: 5px;
+    display: table;
+    font-weight: 600;
+    color: white;
+    font-size: 15px;
+}
+
+.MHeader .menu ul {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.MHeader .menu ul > li {
+    display: block;
+    float: left;
+    height: 32px;
+    min-width: 60px;
+    text-align: center;
+    line-height: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.MHeader .menu ul > li:hover {
+    color: #dad55e;
+}
+
+.MHeader .menu ul > .select {
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: #1b3d50;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 -1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.MHeader .menu ul > li i {
+    padding-left: 3px;
+    width: 14px;
+    display: none;
+}
+
+.MHeader .menu ul > li a {
+    text-decoration: none;
+}
+
+.MHeader .menu ul > .mulity:hover span > .fa-caret-down {
+    display: none;
+}
+
+.MHeader .menu ul > .mulity:hover span > .fa-caret-left {
+    display: inline-block;
+}
+
+.MHeader .menu ul > .mulity span > .fa-caret-down {
+    display: inline-block;
+}
+
+.MHeader .menu ul > .mulity span > .fa-caret-left {
+    display: none;
+}
+
+.MHeader .menu ul > li:hover ol ,.MHeader .menu ul > li:hover .qrCodePic{
+    display: block;
+}
+
+.MHeader .menu ul > li:hover .arrow {
+    display: block;
+}
+
+.MHeader .menu .arrow {
+    z-index: 10001;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 32px;
+    height: 9px;
+    width: 100%;
+    text-align: center;
+    line-height: 8px;
+}
+
+.MHeader .menu .arrow span {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #14415a;
+}
+
+.MHeader .menu ol ,.MHeader .menu .qrCodePic{
+    z-index: 10000;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    width: auto;
+    border-radius: 5px;
+    background-image: url(../../Images/nav_dropdown_bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    min-height: 180px;
+    min-width: 160px;
+    padding-top: 6px;
+}
+
+.MHeader .menu .qrCodePic{
+    display:none;
+    color: #9d9e9d;
+    background-color: white;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal;
+    left: -170px;
+    background-image: none;
+    border: 1px solid #14415a;
+    border-top: 0;
+    padding: 12px;
+    min-height: 0;
+    width: 230px;
+}
+
+.MHeader .menu .qrCodePic .divider{
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    border-left: 1px solid #d1d1d1;
+    top: 0;right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.MHeader .menu .qrCodePic img{
+    margin-bottom: 6px;
+    width: 100px;
+}
+
+.MHeader .menu ol > li {
+    display: block;
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    white-space: nowrap;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 3px;
+    text-align: left;
+    padding-left: 12px;
+    font-size: 13px;
+}
+
+.MHeader .menu ol > li:hover {
+    background-color: rgba(255, 255, 255, 0.60);
+    border-radius: 3px;
+}
+
+.MHeader .menu ol > .select {
+    background-color: rgba(255, 255, 255, 0.60);
+    border-radius: 3px;
+}
+
+.MHeader .uinfo {
+    float:right;
+    font-weight: normal;
+}
+
+.MHeader .uinfo ul > li{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.MHeader .uinfo .event-prompt{
+    color: #cc7014;
+    display:none;
+}
+.MHeader .uinfo .event-prompt > i{
+    display: inline-block;
+}
+.MHeader .uinfo .event-prompt:hover{
+    color: #cc7014;
+    cursor:default;
+}
+
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: 1;}
+    50.01%{opacity: 0;} /* 注意这里定义50.01%立刻透明度为０，可以设置闪烁效果 */
+    100%{opacity: 0;}
+}
+
+/* 添加兼容性前缀 */
+
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+@-ms-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+.textBlink{
+    animation: blink .75s linear infinite;
+    -webkit-animation: blink .75s linear infinite;
+    -ms-animation: blink .75s linear infinite;
+    color: #cc7014;
+}
+
+/** 内容区布局 */
+
+.MContent {
+    top: 56px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    overflow: auto;
+}
+
+.ModelContainer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10010;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.MapContainer {
+    display: none;
+    border-radius: 5px;
+}
+
+.ModelContainer .MapContainer {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -300px;
+}
+
+.MContent .MapContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    clear: both;
+}
+
+.MContent .MainContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    clear: both;
+    overflow-y: hidden;
+}
+
+.ModelContainer .MapContainer iframe {
+    min-height: 600px;
+}
+
+/** 主页布局 */
+.MainContainer > .lm-abo-left{
+    width:180px;
+}
+
+.MainContainer > .lm-abo-right{
+    left:186px;
+}
+
+.lm-abo-right .tableview{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.tableview .lm-abo-top{
+    background-color: #e5e5e5;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.tableview .lm-abo-top .Item{
+    padding: 4px 0;
+}
+
+.tableview .lm-abo-top .Item .FormWidth{
+    display: inline-block;
+    width: 156px;
+}
+
+.tableview .lm-abo-bottom{
+
+}
+
+.lm-abo-right .ContentInfo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+}
+
+.ContentInfo > .lm-abo-left{
+    right: 216px;
+}
+
+.ContentInfo > .lm-abo-right{
+    width: 210px;
+}
+
+
+/** 左侧菜单样式 */
+.MainContainer .Accordion{
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.30);
+    margin-bottom: 6px;
+    color: white;
+    position: relative;
+    -webkit-transition: height;
+    transition: height;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border: 1px solid transparent;
+}
+
+.Accordion .groupname{
+
+    overflow-y: auto;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.Accordion .groupname i{
+    float: right;
+    margin-right: 10px;
+    margin-top: 9px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.Accordion ul{
+    overflow-y: hidden;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Accordion ul:hover{
+    overflow-y: auto;
+}
+
+.Accordion ul li{
+    height: 40px;
+    line-height: 40px;
+    margin-top: 2px;
+    cursor: pointer;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: relative;
+}
+
+.Accordion ul li i{
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.Accordion ul li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Accordion ul li.select{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Accordion ul li.select span {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 2px solid white;
+    font-family: 'FontAwesome';
+}
+
+.Accordion ul li.select span:after{
+    content: "\f0da"
+}

@@ -1,0 +1,289 @@
+﻿
+
+
+
+
+
+
+
+
+.list-group {
+    padding-left: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.has-success .btn-default {
+  border-color: #3c763d;
+}
+
+.mycontainer {
+    margin: 0 auto;
+    max-width: 1070px;
+    min-width: 568px;
+    overflow: hidden;
+   
+}
+
+.mylist-group-item {
+    border-bottom: 1px solid #e3e3e9;
+}
+
+
+
+
+
+
+
+
+
+
+   
+
+
+.nav .dropdown a:hover {
+    background-color: #B6E0FA;
+}
+
+
+
+.my-title {
+    font-size: 100%;
+    color: #333;
+    font-weight: bold;
+    height: 48px;
+    line-height: 48px;
+}
+
+.column {
+    float: left;
+    text-align: left;
+}
+
+.info-list {
+    position: relative;
+}
+
+.info-list-inner {
+    padding-left: 100px;
+}
+
+.info-list .column-ioc {
+        position: absolute;
+        left: 25px;
+        top: 20px;
+    }
+
+    .info-list .column-content {
+        width: 100%;
+    }
+
+.content-title {
+    font-size: 110%;
+  margin-top: 3px;
+    margin-bottom: 3px;
+    color: #333;
+    font-weight: 700;
+}
+.content-head {
+    font-size: 100%;
+    argin-top: 5px;
+    margin-bottom: 3px;
+    color: #333;
+    font-weight: 700;
+}
+
+
+
+.content-info {
+    font-size: 92%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #575757;
+    font-weight: normal;
+}
+
+.content-other {
+    font-size: 92%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #696969;
+
+    font-weight: normal;
+}
+
+
+
+    .info-list .h4 {
+        color: #333;
+        font-size: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .info-list span{
+        color: #696969;
+        font-size: 92%;
+        font-weight: 100;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .info-list .column-other {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+
+.maincontet {
+    color: #333;
+    font-size: 100%;
+    font-weight: 700;
+    height: 24px;
+    line-height: 24px;
+}
+
+.twocontent {
+    color: #666;
+    font-size: 92%;
+    font-weight: normal;
+    height: 24px;
+    line-height: 24px;
+}
+
+.threecontent {
+    color: #999;
+    font-size: 85%;
+    font-weight: normal;
+    height: 24px;
+    line-height: 24px;
+}
+
+
+
+.defaultpanbox {
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin: 0;
+    border-bottom: 1px solid #e3e3e9;
+}
+
+
+/*.mybtn-default {
+    margin-right: 15px;
+    float: right;
+    padding: 4px 30px;
+    height: 28px;
+    color: #fff;
+    font-size: 13px;
+    background-color: #3388ff;
+}*/
+
+
+
+
+
+/*.form-container {
+    margin-top: 20px;
+}*/
+
+/*.form-control {
+    height: 28px;
+    font-size: 12px;
+    line-height: 1.32857143;
+}*/
+
+.form-group>div {
+    margin-bottom: 10px;
+}
+
+
+
+.control-label {
+    font-size: 14px;
+}
+
+/*.label-control {
+    font-size: 12px;
+    color: #030303;
+    height: 28px;
+    line-height: 1.32857143;
+    margin-bottom: 0;
+    text-align: right;
+    font-weight: 600;
+    padding-top: 7px;
+}*/
+
+/*.my-group-btn {
+    font-size: 14px;
+    height: 28px;
+    padding: 3px 10px;
+    line-height: 1.32857143;
+}*/
+
+/*.input-group-addon {
+    height: 28px;
+    padding: 5px 10px;
+    font-size: 14px;
+   
+}*/
+
+
+.my-btn {
+    color: #fff;
+    background-color: #3388ff;
+    border-color: #3382ff;
+}
+
+    .my-btn:focus,
+    .my-btn.focus {
+        color: #fff;
+        background-color: #3382ff;
+        border-color: #3380ff;
+    }
+
+    .my-btn:hover {
+        color: #fff;
+        background-color: #3380ff;
+        border-color: #3380ff;
+    }
+
+    .my-btn:active,
+    .my-btn.active {
+        color: #fff;
+        background-color: #3382ff;
+        border-color: #3382ff;
+    }
+
+
+
+
+    
+        .ui-choose {
+            list-style: none;
+           
+        }
+
+            .ui-choose li {
+                float: left;
+                margin-right: 15px;
+                padding: 5px 10px;
+                color: #393939;
+                font-weight: normal;
+                font-size: 12px;
+                cursor: pointer;
+                margin-bottom: 8px;
+            }
+
+                .ui-choose li img {
+                    /*border: 1px solid transparent;*/
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 3px;
+                    border-radius: 3px;
+                }
+
+                .ui-choose li.selected {
+                    background-color: #3388ff;
+                    color: #ffffff;
+                }

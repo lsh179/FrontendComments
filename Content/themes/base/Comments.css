@@ -1,0 +1,45 @@
+﻿
+
+/** 蓝色主题色按钮 */
+.lm-btn-theme{
+    border: 1px solid #0075ca;
+    color: #FFFFFF;
+    background: -ms-linear-gradient(top, #54a3d1,  #3d83a8);        /* IE 10 */
+    background:-moz-linear-gradient(top,#54a3d1, #3d83a8);/*火狐*/
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#54a3d1), to(#3d83a8));/*谷歌*/
+    box-shadow: inset 0 1px 0 rgba(255, 255 ,255, .2), 0 1px 0 rgba(255, 255, 255, .3);
+}
+
+.lm-btn-theme:hover{
+    background: -ms-linear-gradient(top, #68b5e1,  #4e94b9);        /* IE 10 */
+    background:-moz-linear-gradient(top,#68b5e1, #4e94b9);/*火狐*/
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#68b5e1), to(#4e94b9));/*谷歌*/
+    box-shadow: inset 0 1px 0 rgba(255, 255 ,255, .28), 0 1px 0 rgba(255, 255, 255, .18);
+}
+
+.lm-btn-theme:active{
+    background: -ms-linear-gradient(top, #54a3d1,  #3d83a8);        /* IE 10 */
+    background:-moz-linear-gradient(top,#54a3d1, #3d83a8);/*火狐*/
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#3d83a8), to(#3d83a8));/*谷歌*/
+    box-shadow: inset 0 1px 4px rgba(0, 0 ,0, 0.2), 0 -1px 0 rgba(255, 255, 255, .1);
+}
+
+/** 表格头部主题 */
+.lm-table thead{
+    /*background: -ms-linear-gradient(top, #3f7695,  #5392b5);        !* IE 10 *!*/
+    /*background:-moz-linear-gradient(top,#3f7695, #5392b5);!*火狐*!*/
+    /*background: -webkit-linear-gradient(top, #3f7695, #5392b5);!**谷歌*10以上*!*/
+    background-color: #e6edf0;
+    color: #444444;
+}
+
+/** 按钮组选择主题 */
+.lm-btn-group > .selected{
+    z-index: 1;
+    border: 1px solid #0075ca;
+    color: #FFFFFF;
+    background: -ms-linear-gradient(top, #54a3d1,  #3d83a8);        /* IE 10 */
+    background:-moz-linear-gradient(top,#54a3d1, #3d83a8);/*火狐*/
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#54a3d1), to(#3d83a8));/*谷歌*/
+    box-shadow: inset 0 1px 0 rgba(255, 255 ,255, .2), 0 1px 0 rgba(255, 255, 255, .3);
+}

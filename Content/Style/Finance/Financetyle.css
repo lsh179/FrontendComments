@@ -1,0 +1,244 @@
+﻿.green {
+    color: #0E8C29;
+}
+
+.red {
+    color: #F24A38;
+}
+
+
+.graybg {
+    background-color: #F0F3F5;
+}
+
+.data-box .NoEdit .handsomthing {
+    display: none;
+}
+
+.data-box > table .actbutton {
+    cursor: pointer;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.data-box > table .upload {
+    color: #26BBC9;
+}
+
+.data-box > table .edit {
+    color: #5FAFEC;
+}
+
+.data-box > table .deleted {
+    color: #FA5E5B;
+}
+
+.data-box > table .pjshowimg {
+    width: 40px;
+    position: relative;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    height: 20px;
+}
+
+    .data-box > table .pjshowimg > a {
+        color: #1b1919;
+        left: 5px;
+        top: 5px;
+        display: block;
+        cursor: pointer;
+    }
+
+.tabletotal {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    float: left;
+    line-height: 27px;
+    height: 27px;
+}
+
+.handContent {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+    .handContent .Title {
+        text-align: center;
+        width: 100%;
+        letter-spacing: 2px;
+    }
+
+        .handContent .Title span {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+    .handContent span.Label {
+        font-weight: 700;
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .handContent .formcontent {
+        width: 100%;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+        .handContent .formcontent .formrow {
+            position: relative;
+            width: 100%;
+            line-height: 28px;
+        }
+
+            .handContent .formcontent .formrow span.title {
+                margin-top: 3px;
+                float: left;
+                width: 100px;
+                text-align: right;
+                display: block;
+                line-height: 28px;
+            }
+
+            .handContent .formcontent .formrow span.money {
+                float: left;
+                width: 80px;
+                text-align: right;
+                display: block;
+                line-height: 28px;
+            }
+
+            .handContent .formcontent .formrow span.remark {
+                color: #929292;
+            }
+
+            .handContent .formcontent .formrow .formcontrol {
+                width: 280px;
+                float: left;
+                height: 28px;
+                position: relative;
+                margin-top: 3px;
+                margin-bottom: 3px;
+            }
+
+            .handContent .formcontent .formrow .form2control {
+                width: 660px;
+                float: left;
+                position: relative;
+                margin-top: 3px;
+                margin-bottom: 3px;
+            }
+
+                .handContent .formcontent .formrow .form2control textarea {
+                    height: 58px;
+                }
+
+
+ .tableact {
+        float: right;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+ .tableact .btn-group {
+    margin-right: 15px;
+}
+
+ .tableact button {
+    height: 27px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+    .handContent .formcontent .formcontrol .input-group-addon {
+        display: block;
+        position: absolute;
+        right: 0px;
+        margin: 1px;
+        top: 0px;
+        width: 60px;
+        height: 26px;
+        background-color: #eeeeee;
+        border-width: 0 0 0 1px;
+        border-color: #cccccc;
+        border-style: solid;
+        text-align: center;
+        border-radius: 0 3px 3px 0;
+        z-index: 21;
+    }
+
+    .handContent .formcontent .formcontrol .form-control {
+        display: block;
+        float: left;
+        text-align: right;
+        display: block;
+        text-align: left;
+        height: 28px;
+        line-height: 28px;
+        margin-right: 12px;
+    }
+
+    .handContent .formcontent .formcontrol:last-child {
+        margin-right: 0;
+    }
+
+    .handContent .formrow button {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        height: 26px;
+        padding-top: 2px;
+        border-radius: 4px;
+        margin-top: 3px;
+    }
+
+    .handContent .financepjs {
+        float: left;
+    }
+
+        .handContent .financepjs span {
+            display: block;
+            float: left;
+            margin-right: 7px;
+            line-height: 28px;
+            margin-top: 3px;
+        }
+
+        .handContent .financepjs .glyphicon {
+            margin-top: 6px;
+        }
+
+        .handContent .financepjs .pjtitle {
+            max-width: 90px;
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+
+        .handContent .financepjs i {
+            display: block;
+            float: left;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .handContent .financepjs a {
+            display: block;
+            float: left;
+            cursor: pointer;
+            color: #1b1919;
+            margin-right: 5px;
+        }
+  .handContent  .data-box .table-hover > tbody > tr >td {
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.handContent .data-box .table-hover > tbody > tr:hover {
+    background-color: transparent;
+}
+
+.handContent .data-box .table > tbody > tr.active > td{
+    background-color: transparent;
+}

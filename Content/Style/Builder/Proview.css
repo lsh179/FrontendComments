@@ -1,0 +1,88 @@
+﻿#project_info {
+    animation: info_in1 0.1s;
+    -moz-animation: info_in1 0.1s; /* Firefox */
+    -webkit-animation: info_in1 0.1s; /* Safari 和 Chrome */
+    -o-animation: info_in1 0.1s;
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#p_panel {
+    z-index: 10;
+    min-width: 700px;
+    display: none;
+    margin-right: 0;
+    border-left: 1px solid #e3e3e9;
+    -webkit-box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+}
+
+#close-btn-projectinfo {
+    position: absolute;
+    display: inline-block;
+    line-height: 35px;
+    top: -4px;
+    left: 5px;
+    margin-left: 5px;
+}
+
+.projectnameshow {
+    display: inline-block;
+    height: 30px;
+    margin-right: 20px;
+    line-height: 30px;
+}
+
+.flowstep {
+    border-radius: 5px;
+    border: 1px solid #c7cdd4;
+    width: 320px;
+}
+
+.flowcontent {
+    border-radius: 5px;
+    border: 1px solid #c7cdd4;
+}
+
+.flowstep > div {
+    border-bottom: 1px solid #c7cdd4;
+    padding: 6px;
+    padding-left: 15px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+    .flowstep > div:last-child {
+        border-bottom: none;
+        margin-bottom: 20px;
+    }
+
+    .flowstep > div.flowstepheader {
+        border-bottom: 2px solid #c7cdd4;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 8px;
+        margin: 0;
+    }
+
+/**工程阶段样式显示**/
+.QIANJIJIEDUAN {
+    color: #e85755;
+}
+
+.SHIGONGJIEDUAN {
+    color: #2985cc;
+}
+
+.JUNGONGJIEDUAN {
+    color: #08a973;
+}

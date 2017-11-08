@@ -1,0 +1,125 @@
+﻿
+.fileObjContainer {
+    padding: 5px 5px 5px 5px;
+    vertical-align: top;
+}
+
+.event_box {
+    padding: 3px;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+    .event_box div {
+        position: relative;
+    }
+
+    .event_box .filename {
+        display: block;
+        word-wrap: hyphenate;
+        font-size: small;
+        overflow: hidden;
+        width: 100%;
+        border: none;
+    }
+
+.fileObjContainer .event_box:last-child {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.file_add {
+    font-size: medium;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+    .file_add:hover {
+        background-color: #adc4ee;
+    }
+
+.event_box:hover {
+    background-color: #adc4ee;
+}
+
+    .event_box:hover .filename {
+        background-color: #adc4ee;
+    }
+
+.event_box .opbtn {
+    width: 50px;
+    font-size: 11px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #808080;
+    margin-left: 1px;
+    margin-right: 1px;
+    transition: all 1s;
+    background-color: white;
+}
+
+    .event_box .opbtn span {
+        font-size: 11px;
+        width: 48px;
+    }
+
+    .event_box .opbtn:hover {
+        background-color: #337ab7;
+        color: white;
+        border-color: white;
+        width: 50px;
+        font-size: 11px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+        .event_box .opbtn:hover span {
+            color: white;
+        }
+
+.event_box .oprate {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+}
+
+.event_box:hover .oprate {
+    opacity: 1;
+    bottom: 0;
+}
+
+.event_box:hover .edit .edit_span,
+.event_box:hover .edit .delete_span,
+.event_box:hover .edit .download_span,
+.event_box:hover .edit .share_span {
+    display: initial;
+}
+
+.event_box .read .edit_span,
+.event_box .read .delete_span,
+.event_box:hover .read .edit_span,
+.event_box:hover .read .delete_span {
+    display: none;
+}
+
+.confirm_input {
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-bottom-color: gray;
+    width: 100%;
+    transition: all 1s;
+}

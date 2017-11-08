@@ -1,0 +1,131 @@
+.lmtable{
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border: 0;
+    min-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lmtable th {
+    box-sizing: border-box;
+    background: #e7ecf0;
+    font-size:15px;
+    font-weight: normal;
+    /*
+    background: -ms-linear-gradient(top, #54a3d1, #3d83a8);
+    background: -moz-linear-gradient(top,#54a3d1, #3d83a8);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#54a3d1), to(#3d83a8));
+    color:white;*/
+}
+
+.lmtable tbody tr:hover{
+    cursor: pointer;
+    background-color: #fef2e1;
+}
+
+.lmtable tr td{
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.lmtable th .sortcol{
+    display:block;
+    text-align: center;
+    height: 26px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.lmtable th .sortcol>div{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lmtable th .sortcol .sorttitle{
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    float: left;
+}
+.lmtable th .sortcol .sortspan{
+    display: inline-block;
+    margin-left: 8px;
+    position: relative;
+    top: -3px;
+}
+.lmtable th .sortcol .sortspan i{
+    display: block;
+    height: 13px;
+    font-size: 13px;
+    box-sizing: border-box;
+    color: #ced5da;
+}
+.lmtable th .sortcol .sortspan .fa-caret-up{
+    padding-top: 2px;
+}
+.lmtable th .sortcol .sortspan .fa-caret-down{
+    margin-top:-2px;
+}
+.lmtable th .sortcol .sortspan .select{
+    color:#6c7880;
+}
+
+.automatchtable tbody{
+
+    /* position: relative; */
+    overflow: auto;
+    /* border-spacing: 0; */
+    /* border: 0; */
+    /* margin-top: -1px; */
+    /* overflow-x: auto; */
+    /* border-right: 1px solid; */
+}
+.automatchtable thead tr {
+
+    border-spacing: 0;
+    border-collapse: collapse;
+    /*margin-top: -1px;*/
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #b6babf;
+
+}
+
+.automatchtable thead th{
+    height: 36px;
+    cursor: pointer;
+    border-left: 1px solid #b6babf;
+}
+
+.automatchtable thead th:last-child {
+    border-right: 1px solid #b6babf;
+}
+
+.automatchtable tbody tr{
+    border-top: 1px solid #b6babf;
+    height: 36px;
+    cursor: pointer;
+}
+
+.automatchtable tbody tr {
+    border-bottom: 1px solid #b6babf;
+}
+
+.automatchtable tbody  td {
+    border-left: 1px solid #b6babf;
+}
+
+.automatchtable tbody  td:last-child   {
+    border-right: 1px solid #b6babf;
+}
+
+.automatchtable td span{
+    display: block;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-wrap: none;
+}

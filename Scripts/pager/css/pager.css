@@ -1,0 +1,185 @@
+.page-control > .tcdPageCode a:hover {
+    text-decoration: none;
+}
+
+.page-control > .tcdPageCode {
+    display: inline-block;
+    text-align: left;
+    color: #ccc;
+}
+.page-control > .tcdPageCode a {
+    text-decoration: none;
+    display: inline-block;
+    color:black;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid rgba(0,0,0,0);
+    margin: 0 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    width: 24px;
+    text-align: center;
+}
+
+.page-control > .tcdPageCode a:hover {
+    text-decoration: none;
+    border: 1px solid #2175a6;
+}
+.page-control > .tcdPageCode span.current {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 2px;
+    color: #fff;
+    border-radius: 3px;
+    vertical-align: middle;
+    width: 24px;
+    text-align: center;
+    background: -ms-linear-gradient(top, #54a3d1, #3d83a8);
+    background: -moz-linear-gradient(top,#54a3d1, #3d83a8);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#54a3d1), to(#3d83a8));
+    border: 1px solid #2175a6;
+}
+
+.page-control > .tcdPageCode span.disabled {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 2px;
+    color: #bfbfbf;
+    border-radius: 3px;
+    vertical-align: middle;
+    width: 24px;
+    text-align: center;
+    font-size: 12px;
+}
+.page-control > .page-skip{
+    height:26px;
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    top:1px;
+}
+
+.page-control > .page-skip >.input-page-num{
+    width: 45px;
+    height: 26px;
+    border: 1px solid #b8c0cc;
+    padding-left: 6px;
+    border-top-left-radius:2px;
+    border-bottom-left-radius:2px;
+    box-sizing: border-box;
+    margin-left: 3px;
+}
+
+.page-up-down{
+    display: inline-block;
+    height: 24px;
+    width: 20px;
+    border: 1px solid #b8c0cc;
+    position: absolute;
+    border-left: 0;
+    border-top-right-radius:2px;
+    border-bottom-right-radius:2px;
+    cursor: pointer;
+    background-color: white;
+}
+.page-up{
+    height: 50%;
+    width:100%;
+    border-bottom: 1px solid #b8c0cc;
+    text-align: center;
+}
+
+.page-up:hover{
+    /*background-color: #5082e6;*/
+    color: white;
+    background-color: #2175a6;
+}
+
+.page-down{
+    height: 50%;
+    width:100%;
+    text-align: center;
+    border-bottom-right-radius:2px;
+}
+
+.page-down:hover{
+    color: white;
+    background-color: #2175a6;
+}
+
+.page-up > .page-up-icon{
+    font-size: 12px;
+    position: relative;
+    bottom: 4px;
+}
+
+.page-down > .page-down-icon{
+    font-size: 12px;
+    position: relative;
+    bottom: 2px;
+}
+
+.page-control{
+    display: inline-block;
+    user-select: none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    -webkit-user-select:none;
+}
+
+.page-control > .select-numprepage{
+    margin-right: 10px;
+}
+
+.page-control > .select-numprepage{
+    width:80px;
+    height: 26px;
+    border-color: #b8c0cc;
+    border-radius: 2px;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+.page-control > .combo-select{
+    width: 100px;
+    border-color: #cbdaf6;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.pagerResult{
+    display: inline-block;
+    float: right;
+    padding-right: 12px;
+    padding-top: 6px;
+}
+
+.lmPager{
+    width:100%;
+    position:relative;
+}
+
+.page-control .nextPage,.prevPage{
+    font-size: 12px
+}
+
+.page-control .morePage{
+    color: black;
+    font-size:12px;
+    font-weight: bold;
+    position: relative;
+    top:4px;
+}
+
+.pageTotalview {
+    display: block;
+    right: 8px;
+    position: absolute;
+    line-height: 31px;
+    top: 0;
+}

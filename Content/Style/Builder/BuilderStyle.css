@@ -1,0 +1,16 @@
+﻿body {
+}
+
+#builderForm .has-feedback .form-control-feedback {
+    height: 28px;
+    line-height: 28px;
+}
+
+#builderForm .has-feedback .input-group .form-control-feedback {
+    height: 28px;
+    line-height: 28px;
+}
+
+#errorMessageContainer {
+    display: none;
+}

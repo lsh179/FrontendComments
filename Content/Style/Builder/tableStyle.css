@@ -1,0 +1,184 @@
+﻿.tableSetting {
+    border-radius: 4px;
+    border-collapse: separate;
+    border: 1px solid #c3c3c3;
+    margin-bottom: 0px;
+}
+
+.flowWarnTabWidth {
+    max-height: 396px;
+}
+
+.tableHead {
+    background-color: #f0f0f0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+    .tableHead > tr > th {
+        width: 360px;
+    }
+
+.tableHeadWarning {
+    display: block;
+    overflow: auto;
+}
+
+    .tableHeadWarning > tr > th {
+        width: 258px;
+    }
+
+.tableSetting > .tableHead > tr > th {
+    border-bottom: 2px solid #cccccc;
+    padding: 0px;
+    padding-left: 12px;
+    height: 36px;
+    vertical-align: middle;
+}
+
+.tableHead > tr > th > div {
+    border-right: 1px solid #dedede;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #2c3643;
+    font-weight: bold;
+}
+
+.tableHead > tr > th:last-child > div {
+    border: none;
+}
+
+.tableHead > tr > th > div > span {
+    color: #2c3643;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+.tableHead th:last-child span {
+    border: none;
+}
+
+.tableSetting > tbody > tr > td {
+    text-align: left;
+    padding: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 33px;
+    line-height: 33px;
+    border-top: 0px;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.tableSetting > tbody > tr > th > div {
+    font-size: 14px;
+    color: #2c3643;
+    font-weight: bold;
+}
+
+.tableSetting > tbody > tr > td > div {
+    font-size: 13px;
+    color: #2c3643;
+    /*height: 36px;*/
+    line-height: 32px;
+    /*overflow: auto;*/
+}
+
+.CheckBoxTdSpan {
+    margin-left: 20px;
+    color: #2c3643;
+}
+
+.IdentifyColumn {
+    color: #297cbb;
+    margin-left: 20px;
+}
+
+.inputBlueTxt {
+    border: none;
+    color: #297cbb;
+    background-color: transparent;
+    width: 100%;
+    padding: 3px;
+    padding-left: 12px;
+}
+
+    .inputBlueTxt:focus {
+        border: 1px solid;
+        padding-left: 12px;
+        border-radius: 2px;
+    }
+
+.inputBlueTxt-WithText {
+    color: #297cbb;
+}
+
+.inputBlueTxt-WithOutText {
+    color: #c3c3c3;
+    border: 1px #c3c3c3 solid;
+    border-radius: 2px;
+}
+
+.inputNormalTxt {
+    border: none;
+    color: #2c3643;
+    background-color: transparent;
+    width: 100%;
+    padding: 3px;
+    padding-left: 12px;
+}
+
+.inputNormalTxt-WithOutText {
+    color: #c3c3c3;
+    border: 1px #c3c3c3 solid;
+    border-radius: 2px;
+}
+
+.inputNormalTxt:focus {
+    border: 1px #c3c3c3 solid;
+    border-radius: 2px;
+    padding-left: 12px;
+}
+
+.has-error .inputNormalTxt {
+    border: 1px #a94442 solid;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+    .has-error .inputNormalTxt:focus {
+        border: 1px #a94442 solid;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    }
+
+.flowWarnSettingTabHeight {
+    max-height: 612px;
+    overflow: auto;
+    display: block;
+}
+
+    .flowWarnSettingTabHeight > tr > td {
+        width: 258px;
+    }
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.c-primary {
+    background-color: #05a5f5;
+    color: white;
+}
+
+    .c-primary:focus,
+    .c-primary:hover {
+        color: white;
+    }
+
+.sbtc-no-checked {
+    background-color: transparent;
+    border: 1px solid #c3c3c3;
+}

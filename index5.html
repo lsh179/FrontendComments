@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript" src="Scripts/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/Utils/CompentUtil.js"></script>
+    <script type="text/javascript" src="Scripts/lm-feed-back/lmfeedback.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-select/jquery.easydropdown.js"></script>
+
+    <script type="text/javascript" src="Scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/datetimepicker/js/datepicker.min.js"></script>
+    <script type="text/javascript" src="Scripts/datetimepicker/js/i18n/datepicker.zh.js"></script>
+    <script type="text/javascript" src="Scripts/pager/js/pager.js"></script>
+    <script type="text/javascript" src="http://192.168.1.45/Scripts/jquery_confirm/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="Scripts/Uploader/js/jquery.uploader.js"></script>
+    <script type="text/javascript" src="Scripts/SocketManager.js"></script>
+
+    <script type="text/javascript" src="libs/MVVM/namespace.js"></script>
+    <script type="text/javascript" src="libs/MVVM/lib/underscore.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Collection.js"></script>
+    <script type="text/javascript" src="libs/MVVM/core.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Directive.js"></script>
+    <script type="text/javascript" src="libs/MVVM/Observer.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="Content/font-awesome/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/font-lm/style.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/Default.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/themes/base/Comments.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/lm-feed-back/lmfeedback.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/jquery-select/easydropdown.css"/>
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.45/Scripts/jquery_confirm/jquery-confirm.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/Uploader/css/jquery.uploader.css"/>
+
+    <link type="text/css" rel="stylesheet" href="Scripts/bootstrap/css/bootstrap-theme.min.css"/>
+    <link type="text/css" rel="stylesheet" href="Scripts/datetimepicker/css/datepicker.min.css"/>
+
+    <link type="text/css" rel="stylesheet" href="Scripts/pager/css/pager.css"/>
+
+<script>
+    var Sconfig={
+        SystemName:"抢修系统",
+
+    };
+    var MyModel =MVVM.define({
+       name:"MyModel",
+
+    });
+    $(function () {
+        $.showMDialog({title:"登陆窗口",width:400,height:150
+        ,Content:'<div style="line-height: 30px;text-align: center;"><div style="width: 100%;text-align: left;"><span style="width: 120px;text-align: right;display: inline-block;">用户名:</span><input type="text" name="uname" style="width: 180px;"/></div><div style="text-align: left;width: 100%;"><span style="width: 120px;text-align: right;display: inline-block;">密码:</span><input type="password" name="password" style="width: 180px;"/></div><div style="display: inline-block"><button style="width: 70px;height: 24px;margin: 10px;" mdialogbtn="confirm">登陆</button><button  mdialogbtn="close" style="width: 70px;height: 24px;margin: 10px;">关闭</button></div></div>'
+        ,OnConfirm:function (content) {
+            var uname = content.find("input[name=uname]").val();
+            var password = content.find("input[name=password]").val();
+            if(!uname||!password)
+            {
+                $.showMessage({message:"用户名和密码不能为空"});
+                return false;
+            }else {
+                var def = $.Deferred();
+                $.ajax({
+                    url: "http://192.168.1.45:801/LoginRequest.ashx",
+                    type: "post",
+                    data: {username:uname,password:password,rem:true},
+                    dataType: 'json',
+                    async: false,
+                    success: function (data, textStatus, xhr, a, b, c) {
+                        if(data.Pass)
+                        {
+                            var uid = data.AuthenticationToken.User.UID;
+                            $("#LoginUserName").html(data.AuthenticationToken.User.RealName);
+                            var token = data.AuthenticationToken.Token;
+                            setCookie("userid",uid);
+                            setCookie("lb_token",token);
+                            Sconfig.UID= getCookie("userid");
+                            Sconfig.Token =getCookie("lb_token");
+                            socketCore.LoadConfig("http://192.168.1.45:99/api/MessageServer/SocketServerConfig",Sconfig);
+                        }else {
+                            $.showMessage({message:data.ErrorMessage});
+                            return false;
+                        }
+                    },
+                    error: function (x, e) {
+                    },
+                    complete: function (x) {
+                    }
+                });
+                return def.promise();
+            }
+        }
+    });
+    });
+</script>
+</head>
+
+<body >
+<div>
+    <span>当前登陆人：</span><span id="LoginUserName"></span>
+    <span>未读消息信息：</span>
+</div>
+
+</body>
+<script src="indexModel.js" type="text/javascript"></script>
+</html>
